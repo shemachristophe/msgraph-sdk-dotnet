@@ -1,33 +1,56 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
-using static Microsoft.Graph.CoreConstants;
+﻿// ------------------------------------------------------------------------------
+//  Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+// ------------------------------------------------------------------------------
 
 namespace Microsoft.Graph
 {
+    using Newtonsoft.Json;
+    using System;
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Threading.Tasks;
+    using static Microsoft.Graph.CoreConstants;
+
     public class NationalCloudAuthProviderFactory
     {
         private Dictionary<string, Func<IAuthenticationProvider>> _authProviders;
         private IGraphStorageProvider _graphStorageProvider;
         private const string _nationalCloudCacheKey = "graph_national_cloud";
-        public NationalCloudAuthProviderFactory(IGraphStorageProvider graphStorageProvider)
+        /// <summary>
+        /// Create a new NationalCloudAuthProviderFactory
+        /// </summary>
+        /// <param name="graphStorageProvider">An optional storage provider to store mapping of domains to national clouds</param>
+        public NationalCloudAuthProviderFactory(IGraphStorageProvider graphStorageProvider = null)
         {
             _authProviders = new Dictionary<string, Func<IAuthenticationProvider>>();
-            _graphStorageProvider = graphStorageProvider;
+            _graphStorageProvider = graphStorageProvider ?? new StaticGraphStorageProvider();
         }
 
+        /// <summary>
+        /// Adds an <see cref="IAuthenticationProvider"/> that's configured for a national cloud.
+        /// </summary>
+        /// <param name="nationalCloud">The national cloud for the auth provider.</param>
+        /// <param name="authenticationProvider">An auth provider configured for the national cloud.</param>
         public void AddProvider(string nationalCloud, IAuthenticationProvider authenticationProvider)
         {
             _authProviders.Add(nationalCloud, () => authenticationProvider);
         }
 
+        /// <summary>
+        /// Adds an <see cref="IAuthenticationProvider"/> that's configured for a national cloud.
+        /// </summary>
+        /// <param name="nationalCloud">The national cloud for the auth provider.</param>
+        /// <param name="authenticationProvider">A delegate that returns an auth provider configured for the national cloud.</param>
         public void AddProvider(string nationalCloud, Func<IAuthenticationProvider> authenticationProvider)
         {
             _authProviders.Add(nationalCloud, authenticationProvider);
         }
 
+        /// <summary>
+        /// Gets an auth provider configured to a user or tenant national cloud.
+        /// </summary>
+        /// <param name="domainIdentifier">A UserPrincipalName or tenantDomain that will be used to get a national cloud.</param>
+        /// <returns></returns>
         public async Task<IAuthenticationProvider> GetProviderForUserAsync(string domainIdentifier)
         {
             if (string.IsNullOrEmpty(domainIdentifier)) return null;

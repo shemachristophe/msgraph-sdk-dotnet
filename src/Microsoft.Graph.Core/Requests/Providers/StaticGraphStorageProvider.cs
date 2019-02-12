@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿// ------------------------------------------------------------------------------
+//  Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
+// ------------------------------------------------------------------------------
 
 namespace Microsoft.Graph
 {
-    public class StaticGraphStorageProvider : IGraphStorageProvider
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    internal class StaticGraphStorageProvider : IGraphStorageProvider
     {
         private static IDictionary<string, object> _cache = new Dictionary<string, object>();
         public async Task<object> GetStorageItemAsync(string itemId)
