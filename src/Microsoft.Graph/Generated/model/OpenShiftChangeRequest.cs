@@ -12,29 +12,27 @@ namespace Microsoft.Graph
     using System;
     using System.Collections.Generic;
     using System.IO;
-    using System.Runtime.Serialization;
-    using Newtonsoft.Json;
+    using System.Text.Json.Serialization;
 
     /// <summary>
     /// The type Open Shift Change Request.
     /// </summary>
-    [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
     public partial class OpenShiftChangeRequestObject : ScheduleChangeRequestObject
     {
     
-		///<summary>
-		/// The internal OpenShiftChangeRequest constructor
-		///</summary>
-        protected internal OpenShiftChangeRequestObject()
+        ///<summary>
+        /// The OpenShiftChangeRequest constructor
+        ///</summary>
+        public OpenShiftChangeRequestObject()
         {
-            // Don't allow initialization of abstract entity types
+            this.ODataType = "microsoft.graph.openShiftChangeRequest";
         }
-    
+
         /// <summary>
         /// Gets or sets open shift id.
         /// ID for the open shift.
         /// </summary>
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "openShiftId", Required = Newtonsoft.Json.Required.Default)]
+        [JsonPropertyName("openShiftId")]
         public string OpenShiftId { get; set; }
     
     }
