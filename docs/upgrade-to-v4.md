@@ -10,6 +10,7 @@ To improve the development experience provided by the SDK, it was necessary to m
  * .NET Framework minimum version bumped from `net45` to `net462`
  * Replacing Newtonsoft.Json dependency with System.Text.Json for serialization/de-serialization
  * Upgrading Microsoft.Graph.Core dependency to version 2.0.0
+ * Azure Functions need to rely on the ["isolated process" model for .NET 5.0](https://docs.microsoft.com/en-us/azure/azure-functions/dotnet-isolated-process-guide)
 
 ## Upgrade guide for breaking changes
 
