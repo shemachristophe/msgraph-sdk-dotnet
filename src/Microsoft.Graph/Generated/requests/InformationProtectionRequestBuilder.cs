@@ -51,6 +51,18 @@ namespace Microsoft.Graph
         }
     
         /// <summary>
+        /// Gets the request builder for Bitlocker.
+        /// </summary>
+        /// <returns>The <see cref="IBitlockerRequestBuilder"/>.</returns>
+        public IBitlockerRequestBuilder Bitlocker
+        {
+            get
+            {
+                return new BitlockerRequestBuilder(this.AppendSegmentToRequestUrl("bitlocker"), this.Client);
+            }
+        }
+
+        /// <summary>
         /// Gets the request builder for ThreatAssessmentRequests.
         /// </summary>
         /// <returns>The <see cref="IInformationProtectionThreatAssessmentRequestsCollectionRequestBuilder"/>.</returns>

@@ -21,6 +21,12 @@ namespace Microsoft.Graph
     {
     
         /// <summary>
+        /// Gets or sets bitlocker.
+        /// </summary>
+        [JsonPropertyName("bitlocker")]
+        public Bitlocker Bitlocker { get; set; }
+    
+        /// <summary>
         /// Gets or sets threat assessment requests.
         /// </summary>
         [JsonPropertyName("threatAssessmentRequests")]
