@@ -667,6 +667,17 @@ namespace Microsoft.Graph
         }
     
         /// <summary>
+        /// Gets the GraphServiceAdmin request builder.
+        /// </summary>
+        public virtual IAdminRequestBuilder Admin
+        {
+            get
+            {
+                return new AdminRequestBuilder(this.BaseUrl + "/admin", this);
+            }
+        }
+    
+        /// <summary>
         /// Gets the GraphServiceSearch request builder.
         /// </summary>
         public virtual ISearchEntityRequestBuilder Search

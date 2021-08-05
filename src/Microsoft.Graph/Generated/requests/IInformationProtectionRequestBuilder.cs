@@ -32,6 +32,12 @@ namespace Microsoft.Graph
         new IInformationProtectionRequest Request(IEnumerable<Option> options);
     
         /// <summary>
+        /// Gets the request builder for Bitlocker.
+        /// </summary>
+        /// <returns>The <see cref="IBitlockerRequestBuilder"/>.</returns>
+        IBitlockerRequestBuilder Bitlocker { get; }
+
+        /// <summary>
         /// Gets the request builder for ThreatAssessmentRequests.
         /// </summary>
         /// <returns>The <see cref="IInformationProtectionThreatAssessmentRequestsCollectionRequestBuilder"/>.</returns>

@@ -87,6 +87,12 @@ namespace Microsoft.Graph
             bool? shouldSetSpoSiteReadOnlyForMembers = null);
 
         /// <summary>
+        /// Gets the request builder for TeamUnarchive.
+        /// </summary>
+        /// <returns>The <see cref="ITeamUnarchiveRequestBuilder"/>.</returns>
+        ITeamUnarchiveRequestBuilder Unarchive();
+
+        /// <summary>
         /// Gets the request builder for TeamClone.
         /// </summary>
         /// <returns>The <see cref="ITeamCloneRequestBuilder"/>.</returns>
@@ -115,12 +121,6 @@ namespace Microsoft.Graph
             ItemBody previewText = null,
             IEnumerable<KeyValuePair> templateParameters = null,
             TeamworkNotificationRecipient recipient = null);
-
-        /// <summary>
-        /// Gets the request builder for TeamUnarchive.
-        /// </summary>
-        /// <returns>The <see cref="ITeamUnarchiveRequestBuilder"/>.</returns>
-        ITeamUnarchiveRequestBuilder Unarchive();
     
     }
 }
