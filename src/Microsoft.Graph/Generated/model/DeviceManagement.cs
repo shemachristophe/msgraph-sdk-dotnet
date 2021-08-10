@@ -352,6 +352,13 @@ namespace Microsoft.Graph
         public string RemoteAssistancePartnersNextLink { get; set; }
     
         /// <summary>
+        /// Gets or sets reports.
+        /// Reports singleton
+        /// </summary>
+        [JsonPropertyName("reports")]
+        public DeviceManagementReports Reports { get; set; }
+    
+        /// <summary>
         /// Gets or sets telecom expense management partners.
         /// The telecom expense management partners.
         /// </summary>

@@ -31,5 +31,11 @@ namespace Microsoft.Graph
         /// <returns>The built request.</returns>
         IRoleManagementRequest Request(IEnumerable<Option> options);
     
+        /// <summary>
+        /// Gets the request builder for Directory.
+        /// </summary>
+        /// <returns>The <see cref="IRbacApplicationRequestBuilder"/>.</returns>
+        IRbacApplicationRequestBuilder Directory { get; }
+    
     }
 }

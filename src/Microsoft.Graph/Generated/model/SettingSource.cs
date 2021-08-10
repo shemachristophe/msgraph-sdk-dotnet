@@ -36,6 +36,13 @@ namespace Microsoft.Graph
         public string Id { get; set; }
     
         /// <summary>
+        /// Gets or sets sourceType.
+        /// Not yet documented. Possible values are: deviceConfiguration, deviceIntent.
+        /// </summary>
+        [JsonPropertyName("sourceType")]
+        public SettingSourceType? SourceType { get; set; }
+    
+        /// <summary>
         /// Gets or sets additional data.
         /// </summary>
         [JsonExtensionData]
