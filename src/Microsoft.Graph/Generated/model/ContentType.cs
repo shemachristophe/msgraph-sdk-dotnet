@@ -94,6 +94,7 @@ namespace Microsoft.Graph
         /// Gets or sets columnLinksNextLink.
         /// </summary>
         [JsonPropertyName("columnLinks@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ColumnLinksNextLink { get; set; }
     
     }

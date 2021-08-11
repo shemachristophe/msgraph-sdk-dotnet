@@ -31,6 +31,7 @@ namespace Microsoft.Graph
         /// Gets or sets alertsNextLink.
         /// </summary>
         [JsonPropertyName("alerts@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string AlertsNextLink { get; set; }
     
         /// <summary>
@@ -43,6 +44,7 @@ namespace Microsoft.Graph
         /// Gets or sets secureScoreControlProfilesNextLink.
         /// </summary>
         [JsonPropertyName("secureScoreControlProfiles@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SecureScoreControlProfilesNextLink { get; set; }
     
         /// <summary>
@@ -55,6 +57,7 @@ namespace Microsoft.Graph
         /// Gets or sets secureScoresNextLink.
         /// </summary>
         [JsonPropertyName("secureScores@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SecureScoresNextLink { get; set; }
     
     }

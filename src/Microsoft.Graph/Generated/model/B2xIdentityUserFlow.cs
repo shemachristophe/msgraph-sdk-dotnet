@@ -38,6 +38,7 @@ namespace Microsoft.Graph
         /// Gets or sets identityProvidersNextLink.
         /// </summary>
         [JsonPropertyName("identityProviders@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string IdentityProvidersNextLink { get; set; }
     
         /// <summary>
@@ -51,6 +52,7 @@ namespace Microsoft.Graph
         /// Gets or sets languagesNextLink.
         /// </summary>
         [JsonPropertyName("languages@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string LanguagesNextLink { get; set; }
     
         /// <summary>
@@ -64,6 +66,7 @@ namespace Microsoft.Graph
         /// Gets or sets userAttributeAssignmentsNextLink.
         /// </summary>
         [JsonPropertyName("userAttributeAssignments@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string UserAttributeAssignmentsNextLink { get; set; }
     
         /// <summary>
@@ -76,6 +79,7 @@ namespace Microsoft.Graph
         /// Gets or sets userFlowIdentityProvidersNextLink.
         /// </summary>
         [JsonPropertyName("userFlowIdentityProviders@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string UserFlowIdentityProvidersNextLink { get; set; }
     
     }

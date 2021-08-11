@@ -36,6 +36,7 @@ namespace Microsoft.Graph
         /// Gets or sets threatAssessmentRequestsNextLink.
         /// </summary>
         [JsonPropertyName("threatAssessmentRequests@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ThreatAssessmentRequestsNextLink { get; set; }
     
     }

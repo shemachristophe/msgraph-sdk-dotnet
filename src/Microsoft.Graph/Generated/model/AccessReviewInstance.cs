@@ -71,6 +71,7 @@ namespace Microsoft.Graph
         /// Gets or sets decisionsNextLink.
         /// </summary>
         [JsonPropertyName("decisions@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string DecisionsNextLink { get; set; }
     
     }

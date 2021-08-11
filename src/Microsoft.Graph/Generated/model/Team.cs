@@ -130,6 +130,7 @@ namespace Microsoft.Graph
         /// Gets or sets channelsNextLink.
         /// </summary>
         [JsonPropertyName("channels@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ChannelsNextLink { get; set; }
     
         /// <summary>
@@ -149,6 +150,7 @@ namespace Microsoft.Graph
         /// Gets or sets installedAppsNextLink.
         /// </summary>
         [JsonPropertyName("installedApps@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string InstalledAppsNextLink { get; set; }
     
         /// <summary>
@@ -162,6 +164,7 @@ namespace Microsoft.Graph
         /// Gets or sets membersNextLink.
         /// </summary>
         [JsonPropertyName("members@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string MembersNextLink { get; set; }
     
         /// <summary>
@@ -175,6 +178,7 @@ namespace Microsoft.Graph
         /// Gets or sets operationsNextLink.
         /// </summary>
         [JsonPropertyName("operations@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string OperationsNextLink { get; set; }
     
         /// <summary>
