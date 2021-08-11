@@ -27,6 +27,7 @@
     <VersionSuffix></VersionSuffix>
     <PackageReleaseNotes>
 - Latest metadata updates from 10th August 2021 snapshot
+- Fix for @odata.nextLink initialization during paging
     </PackageReleaseNotes>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
