@@ -39,6 +39,7 @@ namespace Microsoft.Graph
         /// Gets or sets connectorsNextLink.
         /// </summary>
         [JsonPropertyName("connectors@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ConnectorsNextLink { get; set; }
     
         /// <summary>
@@ -52,6 +53,7 @@ namespace Microsoft.Graph
         /// Gets or sets operationsNextLink.
         /// </summary>
         [JsonPropertyName("operations@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string OperationsNextLink { get; set; }
     
         /// <summary>
@@ -65,6 +67,7 @@ namespace Microsoft.Graph
         /// Gets or sets printersNextLink.
         /// </summary>
         [JsonPropertyName("printers@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string PrintersNextLink { get; set; }
     
         /// <summary>
@@ -78,6 +81,7 @@ namespace Microsoft.Graph
         /// Gets or sets servicesNextLink.
         /// </summary>
         [JsonPropertyName("services@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ServicesNextLink { get; set; }
     
         /// <summary>
@@ -91,6 +95,7 @@ namespace Microsoft.Graph
         /// Gets or sets sharesNextLink.
         /// </summary>
         [JsonPropertyName("shares@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SharesNextLink { get; set; }
     
         /// <summary>
@@ -104,6 +109,7 @@ namespace Microsoft.Graph
         /// Gets or sets taskDefinitionsNextLink.
         /// </summary>
         [JsonPropertyName("taskDefinitions@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string TaskDefinitionsNextLink { get; set; }
     
         /// <summary>

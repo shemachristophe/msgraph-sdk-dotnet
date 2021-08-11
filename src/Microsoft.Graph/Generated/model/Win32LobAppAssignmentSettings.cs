@@ -29,6 +29,13 @@ namespace Microsoft.Graph
         }
 
         /// <summary>
+        /// Gets or sets deliveryOptimizationPriority.
+        /// The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: notConfigured, foreground.
+        /// </summary>
+        [JsonPropertyName("deliveryOptimizationPriority")]
+        public Win32LobAppDeliveryOptimizationPriority? DeliveryOptimizationPriority { get; set; }
+    
+        /// <summary>
         /// Gets or sets installTimeSettings.
         /// The install time settings to apply for this app assignment.
         /// </summary>

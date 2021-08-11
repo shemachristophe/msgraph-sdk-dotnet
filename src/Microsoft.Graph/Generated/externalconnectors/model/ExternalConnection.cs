@@ -50,6 +50,19 @@ namespace Microsoft.Graph.ExternalConnectors
         public ConnectionState? State { get; set; }
     
         /// <summary>
+        /// Gets or sets groups.
+        /// </summary>
+        [JsonPropertyName("groups")]
+        public IExternalConnectionGroupsCollectionPage Groups { get; set; }
+
+        /// <summary>
+        /// Gets or sets groupsNextLink.
+        /// </summary>
+        [JsonPropertyName("groups@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
+        public string GroupsNextLink { get; set; }
+    
+        /// <summary>
         /// Gets or sets items.
         /// Read-only. Nullable.
         /// </summary>
@@ -60,6 +73,7 @@ namespace Microsoft.Graph.ExternalConnectors
         /// Gets or sets itemsNextLink.
         /// </summary>
         [JsonPropertyName("items@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ItemsNextLink { get; set; }
     
         /// <summary>
@@ -73,6 +87,7 @@ namespace Microsoft.Graph.ExternalConnectors
         /// Gets or sets operationsNextLink.
         /// </summary>
         [JsonPropertyName("operations@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string OperationsNextLink { get; set; }
     
         /// <summary>

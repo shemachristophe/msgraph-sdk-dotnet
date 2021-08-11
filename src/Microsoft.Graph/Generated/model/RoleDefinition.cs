@@ -60,6 +60,7 @@ namespace Microsoft.Graph
         /// Gets or sets roleAssignmentsNextLink.
         /// </summary>
         [JsonPropertyName("roleAssignments@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string RoleAssignmentsNextLink { get; set; }
     
     }

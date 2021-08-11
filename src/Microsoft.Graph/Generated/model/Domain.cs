@@ -120,6 +120,7 @@ namespace Microsoft.Graph
         /// Gets or sets domainNameReferencesNextLink.
         /// </summary>
         [JsonPropertyName("domainNameReferences@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string DomainNameReferencesNextLink { get; set; }
     
         /// <summary>
@@ -133,6 +134,7 @@ namespace Microsoft.Graph
         /// Gets or sets serviceConfigurationRecordsNextLink.
         /// </summary>
         [JsonPropertyName("serviceConfigurationRecords@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ServiceConfigurationRecordsNextLink { get; set; }
     
         /// <summary>
@@ -146,6 +148,7 @@ namespace Microsoft.Graph
         /// Gets or sets verificationDnsRecordsNextLink.
         /// </summary>
         [JsonPropertyName("verificationDnsRecords@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string VerificationDnsRecordsNextLink { get; set; }
     
     }

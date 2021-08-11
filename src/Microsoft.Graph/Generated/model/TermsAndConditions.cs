@@ -87,6 +87,7 @@ namespace Microsoft.Graph
         /// Gets or sets acceptanceStatusesNextLink.
         /// </summary>
         [JsonPropertyName("acceptanceStatuses@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string AcceptanceStatusesNextLink { get; set; }
     
         /// <summary>
@@ -100,6 +101,7 @@ namespace Microsoft.Graph
         /// Gets or sets assignmentsNextLink.
         /// </summary>
         [JsonPropertyName("assignments@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string AssignmentsNextLink { get; set; }
     
     }

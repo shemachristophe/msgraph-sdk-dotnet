@@ -197,6 +197,7 @@ namespace Microsoft.Graph
         /// Gets or sets certificateBasedAuthConfigurationNextLink.
         /// </summary>
         [JsonPropertyName("certificateBasedAuthConfiguration@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string CertificateBasedAuthConfigurationNextLink { get; set; }
     
         /// <summary>
@@ -210,6 +211,7 @@ namespace Microsoft.Graph
         /// Gets or sets extensionsNextLink.
         /// </summary>
         [JsonPropertyName("extensions@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ExtensionsNextLink { get; set; }
     
     }

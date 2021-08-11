@@ -32,6 +32,12 @@ namespace Microsoft.Graph.ExternalConnectors
         new IExternalConnectionRequest Request(IEnumerable<Microsoft.Graph.Option> options);
     
         /// <summary>
+        /// Gets the request builder for Groups.
+        /// </summary>
+        /// <returns>The <see cref="IExternalConnectionGroupsCollectionRequestBuilder"/>.</returns>
+        IExternalConnectionGroupsCollectionRequestBuilder Groups { get; }
+
+        /// <summary>
         /// Gets the request builder for Items.
         /// </summary>
         /// <returns>The <see cref="IExternalConnectionItemsCollectionRequestBuilder"/>.</returns>

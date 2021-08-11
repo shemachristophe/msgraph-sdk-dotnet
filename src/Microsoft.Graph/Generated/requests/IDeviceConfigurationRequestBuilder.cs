@@ -73,6 +73,13 @@ namespace Microsoft.Graph
         /// <returns>The <see cref="IDeviceConfigurationAssignRequestBuilder"/>.</returns>
         IDeviceConfigurationAssignRequestBuilder Assign(
             IEnumerable<DeviceConfigurationAssignment> assignments = null);
+
+        /// <summary>
+        /// Gets the request builder for DeviceConfigurationGetOmaSettingPlainTextValue.
+        /// </summary>
+        /// <returns>The <see cref="IDeviceConfigurationGetOmaSettingPlainTextValueRequestBuilder"/>.</returns>
+        IDeviceConfigurationGetOmaSettingPlainTextValueRequestBuilder GetOmaSettingPlainTextValue(
+            string secretReferenceValueId = null);
     
     }
 }

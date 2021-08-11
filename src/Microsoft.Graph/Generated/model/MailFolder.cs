@@ -74,6 +74,7 @@ namespace Microsoft.Graph
         /// Gets or sets childFoldersNextLink.
         /// </summary>
         [JsonPropertyName("childFolders@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ChildFoldersNextLink { get; set; }
     
         /// <summary>
@@ -87,6 +88,7 @@ namespace Microsoft.Graph
         /// Gets or sets messageRulesNextLink.
         /// </summary>
         [JsonPropertyName("messageRules@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string MessageRulesNextLink { get; set; }
     
         /// <summary>
@@ -100,6 +102,7 @@ namespace Microsoft.Graph
         /// Gets or sets messagesNextLink.
         /// </summary>
         [JsonPropertyName("messages@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string MessagesNextLink { get; set; }
     
         /// <summary>
@@ -113,6 +116,7 @@ namespace Microsoft.Graph
         /// Gets or sets multiValueExtendedPropertiesNextLink.
         /// </summary>
         [JsonPropertyName("multiValueExtendedProperties@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string MultiValueExtendedPropertiesNextLink { get; set; }
     
         /// <summary>
@@ -126,6 +130,7 @@ namespace Microsoft.Graph
         /// Gets or sets singleValueExtendedPropertiesNextLink.
         /// </summary>
         [JsonPropertyName("singleValueExtendedProperties@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SingleValueExtendedPropertiesNextLink { get; set; }
     
     }

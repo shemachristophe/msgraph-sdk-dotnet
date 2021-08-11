@@ -51,6 +51,18 @@ namespace Microsoft.Graph.ExternalConnectors
         }
     
         /// <summary>
+        /// Gets the request builder for Groups.
+        /// </summary>
+        /// <returns>The <see cref="IExternalConnectionGroupsCollectionRequestBuilder"/>.</returns>
+        public IExternalConnectionGroupsCollectionRequestBuilder Groups
+        {
+            get
+            {
+                return new ExternalConnectionGroupsCollectionRequestBuilder(this.AppendSegmentToRequestUrl("groups"), this.Client);
+            }
+        }
+
+        /// <summary>
         /// Gets the request builder for Items.
         /// </summary>
         /// <returns>The <see cref="IExternalConnectionItemsCollectionRequestBuilder"/>.</returns>

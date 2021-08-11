@@ -110,6 +110,7 @@ namespace Microsoft.Graph
         /// Gets or sets appsNextLink.
         /// </summary>
         [JsonPropertyName("apps@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string AppsNextLink { get; set; }
     
         /// <summary>

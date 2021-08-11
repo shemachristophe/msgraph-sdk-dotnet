@@ -30,6 +30,7 @@ namespace Microsoft.Graph
         /// Gets or sets fido2MethodsNextLink.
         /// </summary>
         [JsonPropertyName("fido2Methods@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string Fido2MethodsNextLink { get; set; }
     
         /// <summary>
@@ -42,6 +43,7 @@ namespace Microsoft.Graph
         /// Gets or sets methodsNextLink.
         /// </summary>
         [JsonPropertyName("methods@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string MethodsNextLink { get; set; }
     
         /// <summary>
@@ -54,6 +56,7 @@ namespace Microsoft.Graph
         /// Gets or sets microsoftAuthenticatorMethodsNextLink.
         /// </summary>
         [JsonPropertyName("microsoftAuthenticatorMethods@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string MicrosoftAuthenticatorMethodsNextLink { get; set; }
     
         /// <summary>
@@ -66,6 +69,7 @@ namespace Microsoft.Graph
         /// Gets or sets windowsHelloForBusinessMethodsNextLink.
         /// </summary>
         [JsonPropertyName("windowsHelloForBusinessMethods@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string WindowsHelloForBusinessMethodsNextLink { get; set; }
     
     }

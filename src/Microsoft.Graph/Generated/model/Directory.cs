@@ -30,6 +30,7 @@ namespace Microsoft.Graph
         /// Gets or sets administrativeUnitsNextLink.
         /// </summary>
         [JsonPropertyName("administrativeUnits@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string AdministrativeUnitsNextLink { get; set; }
     
         /// <summary>
@@ -43,6 +44,7 @@ namespace Microsoft.Graph
         /// Gets or sets deletedItemsNextLink.
         /// </summary>
         [JsonPropertyName("deletedItems@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string DeletedItemsNextLink { get; set; }
     
     }
