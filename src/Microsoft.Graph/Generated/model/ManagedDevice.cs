@@ -389,6 +389,7 @@ namespace Microsoft.Graph
         /// Gets or sets deviceCompliancePolicyStatesNextLink.
         /// </summary>
         [JsonPropertyName("deviceCompliancePolicyStates@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string DeviceCompliancePolicyStatesNextLink { get; set; }
     
         /// <summary>
@@ -402,6 +403,7 @@ namespace Microsoft.Graph
         /// Gets or sets deviceConfigurationStatesNextLink.
         /// </summary>
         [JsonPropertyName("deviceConfigurationStates@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string DeviceConfigurationStatesNextLink { get; set; }
     
         /// <summary>

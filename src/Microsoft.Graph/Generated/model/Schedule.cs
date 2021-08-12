@@ -100,6 +100,7 @@ namespace Microsoft.Graph
         /// Gets or sets offerShiftRequestsNextLink.
         /// </summary>
         [JsonPropertyName("offerShiftRequests@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string OfferShiftRequestsNextLink { get; set; }
     
         /// <summary>
@@ -112,6 +113,7 @@ namespace Microsoft.Graph
         /// Gets or sets openShiftChangeRequestsNextLink.
         /// </summary>
         [JsonPropertyName("openShiftChangeRequests@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string OpenShiftChangeRequestsNextLink { get; set; }
     
         /// <summary>
@@ -124,6 +126,7 @@ namespace Microsoft.Graph
         /// Gets or sets openShiftsNextLink.
         /// </summary>
         [JsonPropertyName("openShifts@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string OpenShiftsNextLink { get; set; }
     
         /// <summary>
@@ -137,6 +140,7 @@ namespace Microsoft.Graph
         /// Gets or sets schedulingGroupsNextLink.
         /// </summary>
         [JsonPropertyName("schedulingGroups@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SchedulingGroupsNextLink { get; set; }
     
         /// <summary>
@@ -150,6 +154,7 @@ namespace Microsoft.Graph
         /// Gets or sets shiftsNextLink.
         /// </summary>
         [JsonPropertyName("shifts@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ShiftsNextLink { get; set; }
     
         /// <summary>
@@ -162,6 +167,7 @@ namespace Microsoft.Graph
         /// Gets or sets swapShiftsChangeRequestsNextLink.
         /// </summary>
         [JsonPropertyName("swapShiftsChangeRequests@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SwapShiftsChangeRequestsNextLink { get; set; }
     
         /// <summary>
@@ -175,6 +181,7 @@ namespace Microsoft.Graph
         /// Gets or sets timeOffReasonsNextLink.
         /// </summary>
         [JsonPropertyName("timeOffReasons@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string TimeOffReasonsNextLink { get; set; }
     
         /// <summary>
@@ -187,6 +194,7 @@ namespace Microsoft.Graph
         /// Gets or sets timeOffRequestsNextLink.
         /// </summary>
         [JsonPropertyName("timeOffRequests@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string TimeOffRequestsNextLink { get; set; }
     
         /// <summary>
@@ -200,6 +208,7 @@ namespace Microsoft.Graph
         /// Gets or sets timesOffNextLink.
         /// </summary>
         [JsonPropertyName("timesOff@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string TimesOffNextLink { get; set; }
     
     }

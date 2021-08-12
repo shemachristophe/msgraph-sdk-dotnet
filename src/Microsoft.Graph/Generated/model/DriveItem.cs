@@ -207,6 +207,7 @@ namespace Microsoft.Graph
         /// Gets or sets childrenNextLink.
         /// </summary>
         [JsonPropertyName("children@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ChildrenNextLink { get; set; }
     
         /// <summary>
@@ -227,6 +228,7 @@ namespace Microsoft.Graph
         /// Gets or sets permissionsNextLink.
         /// </summary>
         [JsonPropertyName("permissions@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string PermissionsNextLink { get; set; }
     
         /// <summary>
@@ -240,6 +242,7 @@ namespace Microsoft.Graph
         /// Gets or sets subscriptionsNextLink.
         /// </summary>
         [JsonPropertyName("subscriptions@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SubscriptionsNextLink { get; set; }
     
         /// <summary>
@@ -253,6 +256,7 @@ namespace Microsoft.Graph
         /// Gets or sets thumbnailsNextLink.
         /// </summary>
         [JsonPropertyName("thumbnails@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ThumbnailsNextLink { get; set; }
     
         /// <summary>
@@ -266,6 +270,7 @@ namespace Microsoft.Graph
         /// Gets or sets versionsNextLink.
         /// </summary>
         [JsonPropertyName("versions@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string VersionsNextLink { get; set; }
     
     }

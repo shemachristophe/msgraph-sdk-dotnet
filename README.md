@@ -23,8 +23,10 @@ Register your application to use Microsoft Graph API using the [Microsoft Applic
 
 ### 2. Authenticate for the Microsoft Graph service
 
-The Microsoft Graph .NET Client Library does not currently include any default authentication implementations.
-There are set of preview authentication providers available in the [msgraph-sdk-dotnet-auth](https://github.com/microsoftgraph/msgraph-sdk-dotnet-auth) repo.  Alternatively, you can use the built-in **DelegateAuthenticationProvider** class to authenticate each request.
+The Microsoft Graph .NET Client Library supports the use of TokenCredential classes in the [Azure.Identity](https://www.nuget.org/packages/Azure.Identity) library.
+
+You can read more about available Credential classes [here](https://docs.microsoft.com/en-us/dotnet/api/overview/azure/identity-readme#key-concepts) and examples on how to quickly setup TokenCredential instances can be found [here](docs/tokencredentials.md).
+
 For more information on `DelegateAuthenticationProvider`, see the [library overview](docs/overview.md).  
 
 The recommended library for authenticating against Microsoft Identity (Azure AD) is [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet).
@@ -88,12 +90,6 @@ The following sample applications are also available:
 * [Blog - Microsoft Graph .NET SDK updates 3/16/20](https://developer.microsoft.com/en-us/graph/blogs/microsoft-graph-net-sdk-updates/)
 
 ## Notes
-
-### NewtonSoft.Json version
-
-Install NewtonSoft.Json first if you want to use a version greater than NewtonSoft.Json 6.0.1. For example, you'll need to install NewtonSoft.Json 9.0.1 first if you want to use this to library while targeting .Net Core with standard1.0.
-
-Install System.Runtime.InteropServices.RuntimeInformation before you install Microsoft.Graph >=1.3 if you are having an issue updating the package for a Xamarin solution. You may need to updated references to Microsoft.NETCore.UniversalWindowsPlatform to >=5.2.2 as well.
 
 ### Upgrading from v1
 

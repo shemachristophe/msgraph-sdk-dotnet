@@ -188,6 +188,12 @@ namespace Microsoft.Graph
         IDeviceManagementRemoteAssistancePartnersCollectionRequestBuilder RemoteAssistancePartners { get; }
 
         /// <summary>
+        /// Gets the request builder for Reports.
+        /// </summary>
+        /// <returns>The <see cref="IDeviceManagementReportsRequestBuilder"/>.</returns>
+        IDeviceManagementReportsRequestBuilder Reports { get; }
+
+        /// <summary>
         /// Gets the request builder for TelecomExpenseManagementPartners.
         /// </summary>
         /// <returns>The <see cref="IDeviceManagementTelecomExpenseManagementPartnersCollectionRequestBuilder"/>.</returns>

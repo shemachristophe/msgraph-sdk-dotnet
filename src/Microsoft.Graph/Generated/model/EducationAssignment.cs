@@ -172,6 +172,7 @@ namespace Microsoft.Graph
         /// Gets or sets categoriesNextLink.
         /// </summary>
         [JsonPropertyName("categories@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string CategoriesNextLink { get; set; }
     
         /// <summary>
@@ -185,6 +186,7 @@ namespace Microsoft.Graph
         /// Gets or sets resourcesNextLink.
         /// </summary>
         [JsonPropertyName("resources@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ResourcesNextLink { get; set; }
     
         /// <summary>
@@ -205,6 +207,7 @@ namespace Microsoft.Graph
         /// Gets or sets submissionsNextLink.
         /// </summary>
         [JsonPropertyName("submissions@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SubmissionsNextLink { get; set; }
     
     }

@@ -31,6 +31,7 @@ namespace Microsoft.Graph
         /// Gets or sets sharedNextLink.
         /// </summary>
         [JsonPropertyName("shared@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SharedNextLink { get; set; }
     
         /// <summary>
@@ -44,6 +45,7 @@ namespace Microsoft.Graph
         /// Gets or sets trendingNextLink.
         /// </summary>
         [JsonPropertyName("trending@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string TrendingNextLink { get; set; }
     
         /// <summary>
@@ -57,6 +59,7 @@ namespace Microsoft.Graph
         /// Gets or sets usedNextLink.
         /// </summary>
         [JsonPropertyName("used@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string UsedNextLink { get; set; }
     
     }

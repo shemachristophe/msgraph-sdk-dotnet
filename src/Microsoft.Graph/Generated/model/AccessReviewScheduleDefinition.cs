@@ -115,6 +115,7 @@ namespace Microsoft.Graph
         /// Gets or sets instancesNextLink.
         /// </summary>
         [JsonPropertyName("instances@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string InstancesNextLink { get; set; }
     
     }

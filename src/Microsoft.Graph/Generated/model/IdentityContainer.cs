@@ -36,6 +36,7 @@ namespace Microsoft.Graph
         /// Gets or sets apiConnectorsNextLink.
         /// </summary>
         [JsonPropertyName("apiConnectors@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ApiConnectorsNextLink { get; set; }
     
         /// <summary>
@@ -48,6 +49,7 @@ namespace Microsoft.Graph
         /// Gets or sets b2xUserFlowsNextLink.
         /// </summary>
         [JsonPropertyName("b2xUserFlows@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string B2xUserFlowsNextLink { get; set; }
     
         /// <summary>
@@ -60,6 +62,7 @@ namespace Microsoft.Graph
         /// Gets or sets identityProvidersNextLink.
         /// </summary>
         [JsonPropertyName("identityProviders@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string IdentityProvidersNextLink { get; set; }
     
         /// <summary>
@@ -72,6 +75,7 @@ namespace Microsoft.Graph
         /// Gets or sets userFlowAttributesNextLink.
         /// </summary>
         [JsonPropertyName("userFlowAttributes@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string UserFlowAttributesNextLink { get; set; }
     
     }

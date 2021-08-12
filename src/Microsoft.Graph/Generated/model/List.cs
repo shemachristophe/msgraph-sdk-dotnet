@@ -67,6 +67,7 @@ namespace Microsoft.Graph
         /// Gets or sets columnsNextLink.
         /// </summary>
         [JsonPropertyName("columns@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ColumnsNextLink { get; set; }
     
         /// <summary>
@@ -80,6 +81,7 @@ namespace Microsoft.Graph
         /// Gets or sets contentTypesNextLink.
         /// </summary>
         [JsonPropertyName("contentTypes@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ContentTypesNextLink { get; set; }
     
         /// <summary>
@@ -100,6 +102,7 @@ namespace Microsoft.Graph
         /// Gets or sets itemsNextLink.
         /// </summary>
         [JsonPropertyName("items@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ItemsNextLink { get; set; }
     
         /// <summary>
@@ -113,6 +116,7 @@ namespace Microsoft.Graph
         /// Gets or sets subscriptionsNextLink.
         /// </summary>
         [JsonPropertyName("subscriptions@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string SubscriptionsNextLink { get; set; }
     
     }

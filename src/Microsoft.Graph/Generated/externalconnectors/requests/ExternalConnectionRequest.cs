@@ -246,6 +246,12 @@ namespace Microsoft.Graph.ExternalConnectors
 
             if (externalConnectionToInitialize != null)
             {
+                if (externalConnectionToInitialize.Groups != null && externalConnectionToInitialize.Groups.CurrentPage != null)
+                {
+                    externalConnectionToInitialize.Groups.InitializeNextPageRequest(this.Client, externalConnectionToInitialize.GroupsNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    externalConnectionToInitialize.Groups.AdditionalData = externalConnectionToInitialize.AdditionalData;
+                }
                 if (externalConnectionToInitialize.Items != null && externalConnectionToInitialize.Items.CurrentPage != null)
                 {
                     externalConnectionToInitialize.Items.InitializeNextPageRequest(this.Client, externalConnectionToInitialize.ItemsNextLink);

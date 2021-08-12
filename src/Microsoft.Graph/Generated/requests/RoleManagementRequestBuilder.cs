@@ -50,5 +50,17 @@ namespace Microsoft.Graph
             return new RoleManagementRequest(this.RequestUrl, this.Client, options);
         }
     
+        /// <summary>
+        /// Gets the request builder for Directory.
+        /// </summary>
+        /// <returns>The <see cref="IRbacApplicationRequestBuilder"/>.</returns>
+        public IRbacApplicationRequestBuilder Directory
+        {
+            get
+            {
+                return new RbacApplicationRequestBuilder(this.AppendSegmentToRequestUrl("directory"), this.Client);
+            }
+        }
+    
     }
 }

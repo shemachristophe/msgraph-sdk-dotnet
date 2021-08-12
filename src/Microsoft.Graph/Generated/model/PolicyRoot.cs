@@ -45,6 +45,7 @@ namespace Microsoft.Graph
         /// Gets or sets activityBasedTimeoutPoliciesNextLink.
         /// </summary>
         [JsonPropertyName("activityBasedTimeoutPolicies@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ActivityBasedTimeoutPoliciesNextLink { get; set; }
     
         /// <summary>
@@ -65,6 +66,7 @@ namespace Microsoft.Graph
         /// Gets or sets claimsMappingPoliciesNextLink.
         /// </summary>
         [JsonPropertyName("claimsMappingPolicies@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ClaimsMappingPoliciesNextLink { get; set; }
     
         /// <summary>
@@ -78,6 +80,7 @@ namespace Microsoft.Graph
         /// Gets or sets homeRealmDiscoveryPoliciesNextLink.
         /// </summary>
         [JsonPropertyName("homeRealmDiscoveryPolicies@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string HomeRealmDiscoveryPoliciesNextLink { get; set; }
     
         /// <summary>
@@ -91,6 +94,7 @@ namespace Microsoft.Graph
         /// Gets or sets permissionGrantPoliciesNextLink.
         /// </summary>
         [JsonPropertyName("permissionGrantPolicies@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string PermissionGrantPoliciesNextLink { get; set; }
     
         /// <summary>
@@ -104,6 +108,7 @@ namespace Microsoft.Graph
         /// Gets or sets tokenIssuancePoliciesNextLink.
         /// </summary>
         [JsonPropertyName("tokenIssuancePolicies@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string TokenIssuancePoliciesNextLink { get; set; }
     
         /// <summary>
@@ -117,6 +122,7 @@ namespace Microsoft.Graph
         /// Gets or sets tokenLifetimePoliciesNextLink.
         /// </summary>
         [JsonPropertyName("tokenLifetimePolicies@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string TokenLifetimePoliciesNextLink { get; set; }
     
         /// <summary>
@@ -130,6 +136,7 @@ namespace Microsoft.Graph
         /// Gets or sets featureRolloutPoliciesNextLink.
         /// </summary>
         [JsonPropertyName("featureRolloutPolicies@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string FeatureRolloutPoliciesNextLink { get; set; }
     
         /// <summary>
@@ -150,6 +157,7 @@ namespace Microsoft.Graph
         /// Gets or sets conditionalAccessPoliciesNextLink.
         /// </summary>
         [JsonPropertyName("conditionalAccessPolicies@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string ConditionalAccessPoliciesNextLink { get; set; }
     
         /// <summary>

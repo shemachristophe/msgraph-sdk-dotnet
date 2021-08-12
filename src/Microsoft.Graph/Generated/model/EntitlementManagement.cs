@@ -30,6 +30,7 @@ namespace Microsoft.Graph
         /// Gets or sets accessPackageAssignmentApprovalsNextLink.
         /// </summary>
         [JsonPropertyName("accessPackageAssignmentApprovals@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
         public string AccessPackageAssignmentApprovalsNextLink { get; set; }
     
     }
