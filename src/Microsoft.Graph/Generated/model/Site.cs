@@ -175,6 +175,26 @@ namespace Microsoft.Graph
         public string SitesNextLink { get; set; }
     
         /// <summary>
+        /// Gets or sets term store.
+        /// The termStore under this site.
+        /// </summary>
+        [JsonPropertyName("termStore")]
+        public Microsoft.Graph.TermStore.Store TermStore { get; set; }
+    
+        /// <summary>
+        /// Gets or sets term stores.
+        /// </summary>
+        [JsonPropertyName("termStores")]
+        public ISiteTermStoresCollectionPage TermStores { get; set; }
+
+        /// <summary>
+        /// Gets or sets termStoresNextLink.
+        /// </summary>
+        [JsonPropertyName("termStores@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
+        public string TermStoresNextLink { get; set; }
+    
+        /// <summary>
         /// Gets or sets onenote.
         /// Calls the OneNote service for notebook related operations.
         /// </summary>
