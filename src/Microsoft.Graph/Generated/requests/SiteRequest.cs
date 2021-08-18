@@ -288,6 +288,12 @@ namespace Microsoft.Graph
                     // Copy the additional data collection to the page itself so that information is not lost
                     siteToInitialize.Sites.AdditionalData = siteToInitialize.AdditionalData;
                 }
+                if (siteToInitialize.TermStores != null && siteToInitialize.TermStores.CurrentPage != null)
+                {
+                    siteToInitialize.TermStores.InitializeNextPageRequest(this.Client, siteToInitialize.TermStoresNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    siteToInitialize.TermStores.AdditionalData = siteToInitialize.AdditionalData;
+                }
 
             }
 
