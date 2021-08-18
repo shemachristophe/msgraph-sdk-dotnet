@@ -524,6 +524,17 @@ namespace Microsoft.Graph
         }
     
         /// <summary>
+        /// Gets the GraphServiceCompliance request builder.
+        /// </summary>
+        public virtual IComplianceRequestBuilder Compliance
+        {
+            get
+            {
+                return new ComplianceRequestBuilder(this.BaseUrl + "/compliance", this);
+            }
+        }
+    
+        /// <summary>
         /// Gets the GraphServiceIdentity request builder.
         /// </summary>
         public virtual IIdentityContainerRequestBuilder Identity

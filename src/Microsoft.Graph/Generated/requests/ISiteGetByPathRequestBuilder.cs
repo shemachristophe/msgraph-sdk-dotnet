@@ -121,5 +121,17 @@ namespace Microsoft.Graph
         /// </summary>
         /// <returns>The <see cref="ISiteRequestBuilder"/>.</returns>
         ISiteRequestBuilder Sites  { get; }
+        /// <summary>
+        /// Gets the request builder for TermStore.
+        /// The termStore under this site.
+        /// </summary>
+        /// <returns>The <see cref="Microsoft.Graph.TermStore.IStoreRequestBuilder"/>.</returns>
+        Microsoft.Graph.TermStore.IStoreRequestBuilder TermStore  { get; }
+        /// <summary>
+        /// Gets the request builder for TermStores.
+        /// 
+        /// </summary>
+        /// <returns>The <see cref="Microsoft.Graph.TermStore.IStoreRequestBuilder"/>.</returns>
+        Microsoft.Graph.TermStore.IStoreRequestBuilder TermStores  { get; }
     }
 }

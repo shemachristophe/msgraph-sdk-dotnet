@@ -234,5 +234,29 @@ namespace Microsoft.Graph
                 return new SiteRequestBuilder(this.AppendSegmentToRequestUrl("sites"), this.Client);
             }
         }
+        /// <summary>
+        /// Gets the request builder for TermStore.
+        /// The termStore under this site.
+        /// </summary>
+        /// <returns>The <see cref="Microsoft.Graph.TermStore.IStoreRequestBuilder"/>.</returns>
+        public Microsoft.Graph.TermStore.IStoreRequestBuilder TermStore
+        {
+            get
+            {
+                return new Microsoft.Graph.TermStore.StoreRequestBuilder(this.AppendSegmentToRequestUrl("termStore"), this.Client);
+            }
+        }
+        /// <summary>
+        /// Gets the request builder for TermStores.
+        /// 
+        /// </summary>
+        /// <returns>The <see cref="Microsoft.Graph.TermStore.IStoreRequestBuilder"/>.</returns>
+        public Microsoft.Graph.TermStore.IStoreRequestBuilder TermStores
+        {
+            get
+            {
+                return new Microsoft.Graph.TermStore.StoreRequestBuilder(this.AppendSegmentToRequestUrl("termStores"), this.Client);
+            }
+        }
     }
 }
