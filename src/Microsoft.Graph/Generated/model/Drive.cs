@@ -63,6 +63,20 @@ namespace Microsoft.Graph
         public SystemFacet System { get; set; }
     
         /// <summary>
+        /// Gets or sets bundles.
+        /// Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
+        /// </summary>
+        [JsonPropertyName("bundles")]
+        public IDriveBundlesCollectionPage Bundles { get; set; }
+
+        /// <summary>
+        /// Gets or sets bundlesNextLink.
+        /// </summary>
+        [JsonPropertyName("bundles@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
+        public string BundlesNextLink { get; set; }
+    
+        /// <summary>
         /// Gets or sets following.
         /// The list of items the user is following. Only in OneDrive for Business.
         /// </summary>

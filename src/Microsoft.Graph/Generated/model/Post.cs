@@ -86,7 +86,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets attachments.
-        /// The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable.
+        /// The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the post. Read-only. Nullable. Supports $expand.
         /// </summary>
         [JsonPropertyName("attachments")]
         public IPostAttachmentsCollectionPage Attachments { get; set; }
@@ -100,7 +100,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets extensions.
-        /// The collection of open extensions defined for the post. Read-only. Nullable.
+        /// The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
         /// </summary>
         [JsonPropertyName("extensions")]
         public IPostExtensionsCollectionPage Extensions { get; set; }
@@ -114,7 +114,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets in reply to.
-        /// The earlier post that this post is replying to in the conversationThread. Read-only.
+        /// The earlier post that this post is replying to in the conversationThread. Read-only. Supports $expand.
         /// </summary>
         [JsonPropertyName("inReplyTo")]
         public Post InReplyTo { get; set; }

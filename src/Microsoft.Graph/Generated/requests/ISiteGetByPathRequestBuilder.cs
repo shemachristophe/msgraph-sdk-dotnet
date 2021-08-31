@@ -48,6 +48,13 @@ namespace Microsoft.Graph
             string endDateTime,
             string interval);
         /// <summary>
+        /// Gets the request builder for SiteGetApplicableContentTypesForListRequestBuilder.
+        /// </summary>
+        /// <param name="listId">A listId parameter for the OData method call.</param>
+        /// <returns>The <see cref="ISiteGetApplicableContentTypesForListRequestBuilder"/>.</returns>
+        ISiteGetApplicableContentTypesForListRequestBuilder GetApplicableContentTypesForList(
+            string listId);
+        /// <summary>
         /// Gets the request builder for SiteGetByPathRequestBuilder.
         /// </summary>
         /// <param name="path">A path parameter for the OData method call.</param>
@@ -92,6 +99,12 @@ namespace Microsoft.Graph
         /// <returns>The <see cref="IDriveRequestBuilder"/>.</returns>
         IDriveRequestBuilder Drives  { get; }
         /// <summary>
+        /// Gets the request builder for ExternalColumns.
+        /// The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+        /// </summary>
+        /// <returns>The <see cref="IColumnDefinitionRequestBuilder"/>.</returns>
+        IColumnDefinitionRequestBuilder ExternalColumns  { get; }
+        /// <summary>
         /// Gets the request builder for Items.
         /// Used to address any item contained in this site. This collection cannot be enumerated.
         /// </summary>
@@ -129,7 +142,7 @@ namespace Microsoft.Graph
         Microsoft.Graph.TermStore.IStoreRequestBuilder TermStore  { get; }
         /// <summary>
         /// Gets the request builder for TermStores.
-        /// 
+        /// The collection of termStores under this site.
         /// </summary>
         /// <returns>The <see cref="Microsoft.Graph.TermStore.IStoreRequestBuilder"/>.</returns>
         Microsoft.Graph.TermStore.IStoreRequestBuilder TermStores  { get; }

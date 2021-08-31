@@ -246,6 +246,12 @@ namespace Microsoft.Graph
 
             if (driveToInitialize != null)
             {
+                if (driveToInitialize.Bundles != null && driveToInitialize.Bundles.CurrentPage != null)
+                {
+                    driveToInitialize.Bundles.InitializeNextPageRequest(this.Client, driveToInitialize.BundlesNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    driveToInitialize.Bundles.AdditionalData = driveToInitialize.AdditionalData;
+                }
                 if (driveToInitialize.Following != null && driveToInitialize.Following.CurrentPage != null)
                 {
                     driveToInitialize.Following.InitializeNextPageRequest(this.Client, driveToInitialize.FollowingNextLink);

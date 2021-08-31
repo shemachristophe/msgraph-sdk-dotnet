@@ -28,6 +28,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets api connectors.
+        /// Represents entry point for API connectors.
         /// </summary>
         [JsonPropertyName("apiConnectors")]
         public IIdentityContainerApiConnectorsCollectionPage ApiConnectors { get; set; }
@@ -41,6 +42,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets b2x user flows.
+        /// Represents entry point for B2X and self-service sign-up identity userflows.
         /// </summary>
         [JsonPropertyName("b2xUserFlows")]
         public IIdentityContainerB2xUserFlowsCollectionPage B2xUserFlows { get; set; }
@@ -54,6 +56,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets identity providers.
+        /// Represents entry point for identity provider base.
         /// </summary>
         [JsonPropertyName("identityProviders")]
         public IIdentityContainerIdentityProvidersCollectionPage IdentityProviders { get; set; }
@@ -67,6 +70,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets user flow attributes.
+        /// Represents entry point for identity userflow attributes.
         /// </summary>
         [JsonPropertyName("userFlowAttributes")]
         public IIdentityContainerUserFlowAttributesCollectionPage UserFlowAttributes { get; set; }
