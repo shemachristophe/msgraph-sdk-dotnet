@@ -36,6 +36,12 @@ namespace Microsoft.Graph
         public Audio Audio { get; set; }
     
         /// <summary>
+        /// Gets or sets bundle.
+        /// </summary>
+        [JsonPropertyName("bundle")]
+        public Bundle Bundle { get; set; }
+    
+        /// <summary>
         /// Gets or sets content.
         /// The content stream, if the item represents a file.
         /// </summary>

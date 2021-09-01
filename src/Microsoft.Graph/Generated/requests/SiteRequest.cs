@@ -264,6 +264,12 @@ namespace Microsoft.Graph
                     // Copy the additional data collection to the page itself so that information is not lost
                     siteToInitialize.Drives.AdditionalData = siteToInitialize.AdditionalData;
                 }
+                if (siteToInitialize.ExternalColumns != null && siteToInitialize.ExternalColumns.CurrentPage != null)
+                {
+                    siteToInitialize.ExternalColumns.InitializeNextPageRequest(this.Client, siteToInitialize.ExternalColumnsNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    siteToInitialize.ExternalColumns.AdditionalData = siteToInitialize.AdditionalData;
+                }
                 if (siteToInitialize.Items != null && siteToInitialize.Items.CurrentPage != null)
                 {
                     siteToInitialize.Items.InitializeNextPageRequest(this.Client, siteToInitialize.ItemsNextLink);

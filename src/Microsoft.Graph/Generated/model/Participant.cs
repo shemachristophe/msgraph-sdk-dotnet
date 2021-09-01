@@ -49,6 +49,13 @@ namespace Microsoft.Graph
         public IEnumerable<MediaStream> MediaStreams { get; set; }
     
         /// <summary>
+        /// Gets or sets metadata.
+        /// A blob of data provided by the participant in the roster.
+        /// </summary>
+        [JsonPropertyName("metadata")]
+        public string Metadata { get; set; }
+    
+        /// <summary>
         /// Gets or sets recording info.
         /// Information on whether the participant has recording capability.
         /// </summary>

@@ -119,6 +119,20 @@ namespace Microsoft.Graph
         public string DrivesNextLink { get; set; }
     
         /// <summary>
+        /// Gets or sets external columns.
+        /// The collection of column definitions available in the site that are referenced from the sites in the parent hierarchy of the current site.
+        /// </summary>
+        [JsonPropertyName("externalColumns")]
+        public ISiteExternalColumnsCollectionWithReferencesPage ExternalColumns { get; set; }
+
+        /// <summary>
+        /// Gets or sets externalColumnsNextLink.
+        /// </summary>
+        [JsonPropertyName("externalColumns@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
+        public string ExternalColumnsNextLink { get; set; }
+    
+        /// <summary>
         /// Gets or sets items.
         /// Used to address any item contained in this site. This collection cannot be enumerated.
         /// </summary>
@@ -183,6 +197,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets term stores.
+        /// The collection of termStores under this site.
         /// </summary>
         [JsonPropertyName("termStores")]
         public ISiteTermStoresCollectionPage TermStores { get; set; }
