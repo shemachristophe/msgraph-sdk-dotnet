@@ -31,5 +31,22 @@ namespace Microsoft.Graph
         /// <returns>The built request.</returns>
         new IPresenceRequest Request(IEnumerable<Option> options);
     
+        /// <summary>
+        /// Gets the request builder for PresenceClearPresence.
+        /// </summary>
+        /// <returns>The <see cref="IPresenceClearPresenceRequestBuilder"/>.</returns>
+        IPresenceClearPresenceRequestBuilder ClearPresence(
+            string sessionId);
+
+        /// <summary>
+        /// Gets the request builder for PresenceSetPresence.
+        /// </summary>
+        /// <returns>The <see cref="IPresenceSetPresenceRequestBuilder"/>.</returns>
+        IPresenceSetPresenceRequestBuilder SetPresence(
+            string sessionId,
+            string availability,
+            string activity,
+            Duration expirationDuration = null);
+    
     }
 }

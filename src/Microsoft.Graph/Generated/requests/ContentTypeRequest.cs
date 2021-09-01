@@ -246,11 +246,29 @@ namespace Microsoft.Graph
 
             if (contentTypeToInitialize != null)
             {
+                if (contentTypeToInitialize.BaseTypes != null && contentTypeToInitialize.BaseTypes.CurrentPage != null)
+                {
+                    contentTypeToInitialize.BaseTypes.InitializeNextPageRequest(this.Client, contentTypeToInitialize.BaseTypesNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    contentTypeToInitialize.BaseTypes.AdditionalData = contentTypeToInitialize.AdditionalData;
+                }
                 if (contentTypeToInitialize.ColumnLinks != null && contentTypeToInitialize.ColumnLinks.CurrentPage != null)
                 {
                     contentTypeToInitialize.ColumnLinks.InitializeNextPageRequest(this.Client, contentTypeToInitialize.ColumnLinksNextLink);
                     // Copy the additional data collection to the page itself so that information is not lost
                     contentTypeToInitialize.ColumnLinks.AdditionalData = contentTypeToInitialize.AdditionalData;
+                }
+                if (contentTypeToInitialize.ColumnPositions != null && contentTypeToInitialize.ColumnPositions.CurrentPage != null)
+                {
+                    contentTypeToInitialize.ColumnPositions.InitializeNextPageRequest(this.Client, contentTypeToInitialize.ColumnPositionsNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    contentTypeToInitialize.ColumnPositions.AdditionalData = contentTypeToInitialize.AdditionalData;
+                }
+                if (contentTypeToInitialize.Columns != null && contentTypeToInitialize.Columns.CurrentPage != null)
+                {
+                    contentTypeToInitialize.Columns.InitializeNextPageRequest(this.Client, contentTypeToInitialize.ColumnsNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    contentTypeToInitialize.Columns.AdditionalData = contentTypeToInitialize.AdditionalData;
                 }
 
             }

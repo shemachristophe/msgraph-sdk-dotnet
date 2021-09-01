@@ -32,6 +32,12 @@ namespace Microsoft.Graph
         new IDriveRequest Request(IEnumerable<Option> options);
     
         /// <summary>
+        /// Gets the request builder for Bundles.
+        /// </summary>
+        /// <returns>The <see cref="IDriveBundlesCollectionRequestBuilder"/>.</returns>
+        IDriveBundlesCollectionRequestBuilder Bundles { get; }
+
+        /// <summary>
         /// Gets the request builder for Following.
         /// </summary>
         /// <returns>The <see cref="IDriveFollowingCollectionRequestBuilder"/>.</returns>

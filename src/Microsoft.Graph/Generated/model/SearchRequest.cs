@@ -22,6 +22,20 @@ namespace Microsoft.Graph
     {
 
         /// <summary>
+        /// Gets or sets aggregationFilters.
+        /// Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format '{field}:/'{aggregationFilterToken}/''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format '{field}:or(/'{aggregationFilterToken1}/',/'{aggregationFilterToken2}/')'. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.
+        /// </summary>
+        [JsonPropertyName("aggregationFilters")]
+        public IEnumerable<string> AggregationFilters { get; set; }
+    
+        /// <summary>
+        /// Gets or sets aggregations.
+        /// Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
+        /// </summary>
+        [JsonPropertyName("aggregations")]
+        public IEnumerable<AggregationOption> Aggregations { get; set; }
+    
+        /// <summary>
         /// Gets or sets contentSources.
         /// Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
         /// </summary>
@@ -69,6 +83,13 @@ namespace Microsoft.Graph
         /// </summary>
         [JsonPropertyName("size")]
         public Int32? Size { get; set; }
+    
+        /// <summary>
+        /// Gets or sets sortProperties.
+        /// Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
+        /// </summary>
+        [JsonPropertyName("sortProperties")]
+        public IEnumerable<SortProperty> SortProperties { get; set; }
     
         /// <summary>
         /// Gets or sets additional data.
