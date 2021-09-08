@@ -22,6 +22,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets named locations.
+        /// Read-only. Nullable. Returns a collection of the specified named locations.
         /// </summary>
         [JsonPropertyName("namedLocations")]
         public IConditionalAccessRootNamedLocationsCollectionPage NamedLocations { get; set; }
@@ -35,6 +36,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets policies.
+        /// Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
         /// </summary>
         [JsonPropertyName("policies")]
         public IConditionalAccessRootPoliciesCollectionPage Policies { get; set; }

@@ -34,5 +34,10 @@ namespace Microsoft.Graph
         /// </summary>
         UnknownFutureValue = 2,
 	
+        /// <summary>
+        /// Producer
+        /// </summary>
+        Producer = 3,
+	
     }
 }
