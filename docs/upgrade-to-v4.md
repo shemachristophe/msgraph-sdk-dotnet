@@ -163,7 +163,7 @@ InteractiveBrowserCredentialOptions interactiveBrowserCredentialOptions = new In
 };
 InteractiveBrowserCredential interactiveBrowserCredential = new InteractiveBrowserCredential(interactiveBrowserCredentialOptions);
 
-GraphServiceClient graphClient = new GraphServiceClient(myBrowserCredential, scopes); // you can pass the TokenCredential directly to the GraphServiceClient
+GraphServiceClient graphClient = new GraphServiceClient(interactiveBrowserCredential, scopes); // you can pass the TokenCredential directly to the GraphServiceClient
 
 User me = await graphClient.Me.Request()
                 .GetAsync();
