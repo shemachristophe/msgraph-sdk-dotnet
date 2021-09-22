@@ -15,18 +15,18 @@ namespace Microsoft.Graph
     using System.Text.Json.Serialization;
 
     /// <summary>
-    /// The type Malware.
+    /// The type ConditionalAccessDevices.
     /// </summary>
-    [JsonConverter(typeof(DerivedTypeConverter<Malware>))]
-    public partial class Malware
+    [JsonConverter(typeof(DerivedTypeConverter<ConditionalAccessDevices>))]
+    public partial class ConditionalAccessDevices
     {
 
         /// <summary>
-        /// Gets or sets description.
-        /// Contains the virus details for the malware facet.
+        /// Gets or sets deviceFilter.
+        /// Filter defining the dynamic-device-syntax rule to include/exclude devices. A filter can use device properties (such as extension attributes) to include/exclude them. Cannot be set if includeDevices or excludeDevices is set.
         /// </summary>
-        [JsonPropertyName("description")]
-        public string Description { get; set; }
+        [JsonPropertyName("deviceFilter")]
+        public ConditionalAccessFilter DeviceFilter { get; set; }
     
         /// <summary>
         /// Gets or sets additional data.

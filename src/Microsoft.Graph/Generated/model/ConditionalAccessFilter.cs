@@ -15,18 +15,25 @@ namespace Microsoft.Graph
     using System.Text.Json.Serialization;
 
     /// <summary>
-    /// The type Malware.
+    /// The type ConditionalAccessFilter.
     /// </summary>
-    [JsonConverter(typeof(DerivedTypeConverter<Malware>))]
-    public partial class Malware
+    [JsonConverter(typeof(DerivedTypeConverter<ConditionalAccessFilter>))]
+    public partial class ConditionalAccessFilter
     {
 
         /// <summary>
-        /// Gets or sets description.
-        /// Contains the virus details for the malware facet.
+        /// Gets or sets mode.
+        /// Mode to use for the filter. Possible values are include or exclude.
         /// </summary>
-        [JsonPropertyName("description")]
-        public string Description { get; set; }
+        [JsonPropertyName("mode")]
+        public FilterMode? Mode { get; set; }
+    
+        /// <summary>
+        /// Gets or sets rule.
+        /// Rule syntax is similar to that used for membership rules for groups in Azure AD. For details, see rules with multiple expressions
+        /// </summary>
+        [JsonPropertyName("rule")]
+        public string Rule { get; set; }
     
         /// <summary>
         /// Gets or sets additional data.
