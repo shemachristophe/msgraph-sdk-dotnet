@@ -36,6 +36,13 @@ namespace Microsoft.Graph
         public IEnumerable<ConditionalAccessClientApp> ClientAppTypes { get; set; }
     
         /// <summary>
+        /// Gets or sets devices.
+        /// Devices in the policy.
+        /// </summary>
+        [JsonPropertyName("devices")]
+        public ConditionalAccessDevices Devices { get; set; }
+    
+        /// <summary>
         /// Gets or sets locations.
         /// Locations included in and excluded from the policy.
         /// </summary>
