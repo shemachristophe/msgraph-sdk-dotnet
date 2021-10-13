@@ -74,5 +74,20 @@ namespace Microsoft.Graph
         /// </summary>
         GoogleCloudDevicePolicyController = 64,
 	
+        /// <summary>
+        /// Microsoft365Managed Mdm
+        /// </summary>
+        Microsoft365ManagedMdm = 258,
+	
+        /// <summary>
+        /// Ms Sense
+        /// </summary>
+        MsSense = 1024,
+	
+        /// <summary>
+        /// Intune Aosp
+        /// </summary>
+        IntuneAosp = 2048,
+	
     }
 }

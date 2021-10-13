@@ -51,6 +51,7 @@ namespace Microsoft.Graph.ExternalConnectors
     
         /// <summary>
         /// Gets or sets groups.
+        /// Read-only. Nullable.
         /// </summary>
         [JsonPropertyName("groups")]
         public IExternalConnectionGroupsCollectionPage Groups { get; set; }

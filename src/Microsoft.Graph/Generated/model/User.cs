@@ -205,7 +205,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets last password change date time.
-        /// The time when this Azure AD user last changed their password. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
+        /// The time when this Azure AD user last changed their password or when their password was created, whichever date the latest action was performed. The date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned only on $select.
         /// </summary>
         [JsonPropertyName("lastPasswordChangeDateTime")]
         public DateTimeOffset? LastPasswordChangeDateTime { get; set; }
@@ -422,7 +422,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets user type.
-        /// A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in).
+        /// A string value that can be used to classify user types in your directory, such as Member and Guest. Returned only on $select. Supports $filter (eq, ne, NOT, in). NOTE: For more information about the permissions for member and guest users, see What are the default user permissions in Azure Active Directory?
         /// </summary>
         [JsonPropertyName("userType")]
         public string UserType { get; set; }
@@ -818,27 +818,6 @@ namespace Microsoft.Graph
         public string PeopleNextLink { get; set; }
     
         /// <summary>
-        /// Gets or sets photo.
-        /// The user's profile photo. Read-only.
-        /// </summary>
-        [JsonPropertyName("photo")]
-        public ProfilePhoto Photo { get; set; }
-    
-        /// <summary>
-        /// Gets or sets photos.
-        /// Read-only. Nullable.
-        /// </summary>
-        [JsonPropertyName("photos")]
-        public IUserPhotosCollectionPage Photos { get; set; }
-
-        /// <summary>
-        /// Gets or sets photosNextLink.
-        /// </summary>
-        [JsonPropertyName("photos@odata.nextLink")]
-        [JsonConverter(typeof(NextLinkConverter))]
-        public string PhotosNextLink { get; set; }
-    
-        /// <summary>
         /// Gets or sets drive.
         /// The user's OneDrive. Read-only.
         /// </summary>
@@ -969,6 +948,27 @@ namespace Microsoft.Graph
         /// </summary>
         [JsonPropertyName("onenote")]
         public Onenote Onenote { get; set; }
+    
+        /// <summary>
+        /// Gets or sets photo.
+        /// The user's profile photo. Read-only.
+        /// </summary>
+        [JsonPropertyName("photo")]
+        public ProfilePhoto Photo { get; set; }
+    
+        /// <summary>
+        /// Gets or sets photos.
+        /// Read-only. Nullable.
+        /// </summary>
+        [JsonPropertyName("photos")]
+        public IUserPhotosCollectionPage Photos { get; set; }
+
+        /// <summary>
+        /// Gets or sets photosNextLink.
+        /// </summary>
+        [JsonPropertyName("photos@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
+        public string PhotosNextLink { get; set; }
     
         /// <summary>
         /// Gets or sets activities.
