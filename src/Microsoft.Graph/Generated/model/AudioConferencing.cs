@@ -37,17 +37,29 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets tollFreeNumber.
-        /// The toll-free number that connects to the Audio Conference Provider.
         /// </summary>
         [JsonPropertyName("tollFreeNumber")]
         public string TollFreeNumber { get; set; }
     
         /// <summary>
+        /// Gets or sets tollFreeNumbers.
+        /// List of toll-free numbers that are displayed in the meeting invite.
+        /// </summary>
+        [JsonPropertyName("tollFreeNumbers")]
+        public IEnumerable<string> TollFreeNumbers { get; set; }
+    
+        /// <summary>
         /// Gets or sets tollNumber.
-        /// The toll number that connects to the Audio Conference Provider.
         /// </summary>
         [JsonPropertyName("tollNumber")]
         public string TollNumber { get; set; }
+    
+        /// <summary>
+        /// Gets or sets tollNumbers.
+        /// List of toll numbers that are displayed in the meeting invite.
+        /// </summary>
+        [JsonPropertyName("tollNumbers")]
+        public IEnumerable<string> TollNumbers { get; set; }
     
         /// <summary>
         /// Gets or sets additional data.
