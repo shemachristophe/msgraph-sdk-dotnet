@@ -25,6 +25,11 @@ namespace Microsoft.Graph
         Android = 0,
 	
         /// <summary>
+        /// Android For Work
+        /// </summary>
+        AndroidForWork = 1,
+	
+        /// <summary>
         /// IOS
         /// </summary>
         IOS = 2,
@@ -48,11 +53,6 @@ namespace Microsoft.Graph
         /// Windows10And Later
         /// </summary>
         Windows10AndLater = 6,
-	
-        /// <summary>
-        /// Android Work Profile
-        /// </summary>
-        AndroidWorkProfile = 7,
 	
         /// <summary>
         /// All
