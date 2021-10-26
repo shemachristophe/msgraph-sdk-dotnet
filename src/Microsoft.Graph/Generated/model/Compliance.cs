@@ -22,6 +22,12 @@ namespace Microsoft.Graph
     {
     
         /// <summary>
+        /// Gets or sets ediscovery.
+        /// </summary>
+        [JsonPropertyName("ediscovery")]
+        public Microsoft.Graph.Ediscovery.Ediscoveryroot Ediscovery { get; set; }
+    
+        /// <summary>
         /// Gets or sets @odata.type.
         /// </summary>
         [JsonPropertyName("@odata.type")]

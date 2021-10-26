@@ -113,13 +113,6 @@ namespace Microsoft.Graph
         public string WebUrl { get; set; }
     
         /// <summary>
-        /// Gets or sets schedule.
-        /// The schedule of shifts for this team.
-        /// </summary>
-        [JsonPropertyName("schedule")]
-        public Schedule Schedule { get; set; }
-    
-        /// <summary>
         /// Gets or sets channels.
         /// The collection of channels &amp; messages associated with the team.
         /// </summary>
@@ -194,6 +187,13 @@ namespace Microsoft.Graph
         /// </summary>
         [JsonPropertyName("template")]
         public TeamsTemplate Template { get; set; }
+    
+        /// <summary>
+        /// Gets or sets schedule.
+        /// The schedule of shifts for this team.
+        /// </summary>
+        [JsonPropertyName("schedule")]
+        public Schedule Schedule { get; set; }
     
     }
 }
