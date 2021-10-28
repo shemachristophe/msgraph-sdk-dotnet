@@ -84,10 +84,5 @@ namespace Microsoft.Graph
         /// </summary>
         MsSense = 1024,
 	
-        /// <summary>
-        /// Intune Aosp
-        /// </summary>
-        IntuneAosp = 2048,
-	
     }
 }
