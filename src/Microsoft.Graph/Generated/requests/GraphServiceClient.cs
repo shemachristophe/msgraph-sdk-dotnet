@@ -536,6 +536,17 @@ namespace Microsoft.Graph
         }
     
         /// <summary>
+        /// Gets the GraphServicePrivacy request builder.
+        /// </summary>
+        public virtual IPrivacyRequestBuilder Privacy
+        {
+            get
+            {
+                return new PrivacyRequestBuilder(this.BaseUrl + "/privacy", this);
+            }
+        }
+    
+        /// <summary>
         /// Gets the GraphServiceCompliance request builder.
         /// </summary>
         public virtual IComplianceRequestBuilder Compliance

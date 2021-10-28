@@ -21,6 +21,13 @@ namespace Microsoft.Graph
     {
     
         /// <summary>
+        /// Gets or sets additional notification recipients.
+        /// Defines the list of additional users or group members to be notified of the access review progress.
+        /// </summary>
+        [JsonPropertyName("additionalNotificationRecipients")]
+        public IEnumerable<AccessReviewNotificationRecipientItem> AdditionalNotificationRecipients { get; set; }
+    
+        /// <summary>
         /// Gets or sets created by.
         /// User who created this review. Read-only.
         /// </summary>
