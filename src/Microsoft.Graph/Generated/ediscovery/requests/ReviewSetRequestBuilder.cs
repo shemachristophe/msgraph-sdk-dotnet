@@ -62,5 +62,43 @@ namespace Microsoft.Graph.Ediscovery
             }
         }
     
+        /// <summary>
+        /// Gets the request builder for ReviewSetAddToReviewSet.
+        /// </summary>
+        /// <returns>The <see cref="IReviewSetAddToReviewSetRequestBuilder"/>.</returns>
+        public IReviewSetAddToReviewSetRequestBuilder AddToReviewSet(
+            SourceCollection sourceCollection = null,
+            AdditionalDataOptions? additionalData = null)
+        {
+            return new ReviewSetAddToReviewSetRequestBuilder(
+                this.AppendSegmentToRequestUrl("microsoft.graph.ediscovery.addToReviewSet"),
+                this.Client,
+                sourceCollection,
+                additionalData);
+        }
+
+        /// <summary>
+        /// Gets the request builder for ReviewSetExport.
+        /// </summary>
+        /// <returns>The <see cref="IReviewSetExportRequestBuilder"/>.</returns>
+        public IReviewSetExportRequestBuilder Export(
+            ExportFileStructure exportStructure,
+            string outputName = null,
+            string description = null,
+            string azureBlobContainer = null,
+            string azureBlobToken = null,
+            ExportOptions? exportOptions = null)
+        {
+            return new ReviewSetExportRequestBuilder(
+                this.AppendSegmentToRequestUrl("microsoft.graph.ediscovery.export"),
+                this.Client,
+                exportStructure,
+                outputName,
+                description,
+                azureBlobContainer,
+                azureBlobToken,
+                exportOptions);
+        }
+    
     }
 }

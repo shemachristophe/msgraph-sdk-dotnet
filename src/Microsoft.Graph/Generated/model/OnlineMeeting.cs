@@ -58,7 +58,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets attendee report.
-        /// The content stream of the attendee report of a live event. Read-only.
+        /// The content stream of the attendee report of a Microsoft Teams live event. Read-only.
         /// </summary>
         [JsonPropertyName("attendeeReport")]
         public Stream AttendeeReport { get; set; }
@@ -107,7 +107,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets is broadcast.
-        /// Indicates if this is a live event.
+        /// Indicates if this is a Teams live event.
         /// </summary>
         [JsonPropertyName("isBroadcast")]
         public bool? IsBroadcast { get; set; }
