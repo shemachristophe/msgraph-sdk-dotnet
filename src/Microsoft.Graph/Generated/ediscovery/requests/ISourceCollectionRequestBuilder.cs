@@ -38,6 +38,12 @@ namespace Microsoft.Graph.Ediscovery
         ISourceCollectionAdditionalSourcesCollectionRequestBuilder AdditionalSources { get; }
 
         /// <summary>
+        /// Gets the request builder for AddToReviewSetOperation.
+        /// </summary>
+        /// <returns>The <see cref="IAddToReviewSetOperationWithReferenceRequestBuilder"/>.</returns>
+        IAddToReviewSetOperationWithReferenceRequestBuilder AddToReviewSetOperation { get; }
+
+        /// <summary>
         /// Gets the request builder for CustodianSources.
         /// </summary>
         /// <returns>The <see cref="ISourceCollectionCustodianSourcesCollectionWithReferencesRequestBuilder"/>.</returns>

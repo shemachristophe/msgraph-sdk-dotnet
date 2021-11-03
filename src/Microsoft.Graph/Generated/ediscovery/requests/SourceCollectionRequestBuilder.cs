@@ -63,6 +63,18 @@ namespace Microsoft.Graph.Ediscovery
         }
 
         /// <summary>
+        /// Gets the request builder for AddToReviewSetOperation.
+        /// </summary>
+        /// <returns>The <see cref="IAddToReviewSetOperationWithReferenceRequestBuilder"/>.</returns>
+        public IAddToReviewSetOperationWithReferenceRequestBuilder AddToReviewSetOperation
+        {
+            get
+            {
+                return new AddToReviewSetOperationWithReferenceRequestBuilder(this.AppendSegmentToRequestUrl("addToReviewSetOperation"), this.Client);
+            }
+        }
+
+        /// <summary>
         /// Gets the request builder for CustodianSources.
         /// </summary>
         /// <returns>The <see cref="ISourceCollectionCustodianSourcesCollectionWithReferencesRequestBuilder"/>.</returns>
