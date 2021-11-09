@@ -61,6 +61,78 @@ namespace Microsoft.Graph
                 return new EntitlementManagementAccessPackageAssignmentApprovalsCollectionRequestBuilder(this.AppendSegmentToRequestUrl("accessPackageAssignmentApprovals"), this.Client);
             }
         }
+
+        /// <summary>
+        /// Gets the request builder for AccessPackages.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementAccessPackagesCollectionRequestBuilder"/>.</returns>
+        public IEntitlementManagementAccessPackagesCollectionRequestBuilder AccessPackages
+        {
+            get
+            {
+                return new EntitlementManagementAccessPackagesCollectionRequestBuilder(this.AppendSegmentToRequestUrl("accessPackages"), this.Client);
+            }
+        }
+
+        /// <summary>
+        /// Gets the request builder for AssignmentRequests.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementAssignmentRequestsCollectionRequestBuilder"/>.</returns>
+        public IEntitlementManagementAssignmentRequestsCollectionRequestBuilder AssignmentRequests
+        {
+            get
+            {
+                return new EntitlementManagementAssignmentRequestsCollectionRequestBuilder(this.AppendSegmentToRequestUrl("assignmentRequests"), this.Client);
+            }
+        }
+
+        /// <summary>
+        /// Gets the request builder for Assignments.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementAssignmentsCollectionRequestBuilder"/>.</returns>
+        public IEntitlementManagementAssignmentsCollectionRequestBuilder Assignments
+        {
+            get
+            {
+                return new EntitlementManagementAssignmentsCollectionRequestBuilder(this.AppendSegmentToRequestUrl("assignments"), this.Client);
+            }
+        }
+
+        /// <summary>
+        /// Gets the request builder for Catalogs.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementCatalogsCollectionRequestBuilder"/>.</returns>
+        public IEntitlementManagementCatalogsCollectionRequestBuilder Catalogs
+        {
+            get
+            {
+                return new EntitlementManagementCatalogsCollectionRequestBuilder(this.AppendSegmentToRequestUrl("catalogs"), this.Client);
+            }
+        }
+
+        /// <summary>
+        /// Gets the request builder for ConnectedOrganizations.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementConnectedOrganizationsCollectionRequestBuilder"/>.</returns>
+        public IEntitlementManagementConnectedOrganizationsCollectionRequestBuilder ConnectedOrganizations
+        {
+            get
+            {
+                return new EntitlementManagementConnectedOrganizationsCollectionRequestBuilder(this.AppendSegmentToRequestUrl("connectedOrganizations"), this.Client);
+            }
+        }
+
+        /// <summary>
+        /// Gets the request builder for Settings.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementSettingsRequestBuilder"/>.</returns>
+        public IEntitlementManagementSettingsRequestBuilder Settings
+        {
+            get
+            {
+                return new EntitlementManagementSettingsRequestBuilder(this.AppendSegmentToRequestUrl("settings"), this.Client);
+            }
+        }
     
     }
 }

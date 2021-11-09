@@ -71,6 +71,13 @@ namespace Microsoft.Graph
         public string Etag { get; set; }
     
         /// <summary>
+        /// Gets or sets event detail.
+        /// Read-only.  If present, represents details of an event that happened in a chat, a channel, or a team, for example, members were added, and so on. For event messages, the messageType property will be set to systemEventMessage.
+        /// </summary>
+        [JsonPropertyName("eventDetail")]
+        public EventMessageDetail EventDetail { get; set; }
+    
+        /// <summary>
         /// Gets or sets from.
         /// Details of the sender of the chat message. Can only be set during migration.
         /// </summary>

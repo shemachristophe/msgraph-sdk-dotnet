@@ -61,6 +61,18 @@ namespace Microsoft.Graph
                 return new RbacApplicationRequestBuilder(this.AppendSegmentToRequestUrl("directory"), this.Client);
             }
         }
+
+        /// <summary>
+        /// Gets the request builder for EntitlementManagement.
+        /// </summary>
+        /// <returns>The <see cref="IRbacApplicationRequestBuilder"/>.</returns>
+        public IRbacApplicationRequestBuilder EntitlementManagement
+        {
+            get
+            {
+                return new RbacApplicationRequestBuilder(this.AppendSegmentToRequestUrl("entitlementManagement"), this.Client);
+            }
+        }
     
     }
 }

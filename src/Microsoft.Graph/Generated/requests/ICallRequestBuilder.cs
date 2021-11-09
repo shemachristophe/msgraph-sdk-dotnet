@@ -32,6 +32,12 @@ namespace Microsoft.Graph
         new ICallRequest Request(IEnumerable<Option> options);
     
         /// <summary>
+        /// Gets the request builder for AudioRoutingGroups.
+        /// </summary>
+        /// <returns>The <see cref="ICallAudioRoutingGroupsCollectionRequestBuilder"/>.</returns>
+        ICallAudioRoutingGroupsCollectionRequestBuilder AudioRoutingGroups { get; }
+
+        /// <summary>
         /// Gets the request builder for Operations.
         /// </summary>
         /// <returns>The <see cref="ICallOperationsCollectionRequestBuilder"/>.</returns>
