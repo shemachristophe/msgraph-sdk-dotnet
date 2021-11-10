@@ -51,6 +51,18 @@ namespace Microsoft.Graph
         }
     
         /// <summary>
+        /// Gets the request builder for AudioRoutingGroups.
+        /// </summary>
+        /// <returns>The <see cref="ICallAudioRoutingGroupsCollectionRequestBuilder"/>.</returns>
+        public ICallAudioRoutingGroupsCollectionRequestBuilder AudioRoutingGroups
+        {
+            get
+            {
+                return new CallAudioRoutingGroupsCollectionRequestBuilder(this.AppendSegmentToRequestUrl("audioRoutingGroups"), this.Client);
+            }
+        }
+
+        /// <summary>
         /// Gets the request builder for Operations.
         /// </summary>
         /// <returns>The <see cref="ICallOperationsCollectionRequestBuilder"/>.</returns>

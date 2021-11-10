@@ -34,16 +34,16 @@ namespace Microsoft.Graph
         public AppConsentApprovalRoute AppConsent { get; set; }
     
         /// <summary>
-        /// Gets or sets entitlement management.
-        /// </summary>
-        [JsonPropertyName("entitlementManagement")]
-        public EntitlementManagement EntitlementManagement { get; set; }
-    
-        /// <summary>
         /// Gets or sets terms of use.
         /// </summary>
         [JsonPropertyName("termsOfUse")]
         public TermsOfUseContainer TermsOfUse { get; set; }
+    
+        /// <summary>
+        /// Gets or sets entitlement management.
+        /// </summary>
+        [JsonPropertyName("entitlementManagement")]
+        public EntitlementManagement EntitlementManagement { get; set; }
     
         /// <summary>
         /// Gets or sets @odata.type.

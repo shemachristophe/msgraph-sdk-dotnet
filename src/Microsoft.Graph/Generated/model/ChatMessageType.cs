@@ -39,5 +39,10 @@ namespace Microsoft.Graph
         /// </summary>
         UnknownFutureValue = 3,
 	
+        /// <summary>
+        /// System Event Message
+        /// </summary>
+        SystemEventMessage = 4,
+	
     }
 }

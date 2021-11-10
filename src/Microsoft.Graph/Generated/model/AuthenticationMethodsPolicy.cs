@@ -55,6 +55,13 @@ namespace Microsoft.Graph
         public Int32? ReconfirmationInDays { get; set; }
     
         /// <summary>
+        /// Gets or sets registration enforcement.
+        /// Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
+        /// </summary>
+        [JsonPropertyName("registrationEnforcement")]
+        public RegistrationEnforcement RegistrationEnforcement { get; set; }
+    
+        /// <summary>
         /// Gets or sets authentication method configurations.
         /// Represents the settings for each authentication method.
         /// </summary>

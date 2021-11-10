@@ -36,6 +36,42 @@ namespace Microsoft.Graph
         /// </summary>
         /// <returns>The <see cref="IEntitlementManagementAccessPackageAssignmentApprovalsCollectionRequestBuilder"/>.</returns>
         IEntitlementManagementAccessPackageAssignmentApprovalsCollectionRequestBuilder AccessPackageAssignmentApprovals { get; }
+
+        /// <summary>
+        /// Gets the request builder for AccessPackages.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementAccessPackagesCollectionRequestBuilder"/>.</returns>
+        IEntitlementManagementAccessPackagesCollectionRequestBuilder AccessPackages { get; }
+
+        /// <summary>
+        /// Gets the request builder for AssignmentRequests.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementAssignmentRequestsCollectionRequestBuilder"/>.</returns>
+        IEntitlementManagementAssignmentRequestsCollectionRequestBuilder AssignmentRequests { get; }
+
+        /// <summary>
+        /// Gets the request builder for Assignments.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementAssignmentsCollectionRequestBuilder"/>.</returns>
+        IEntitlementManagementAssignmentsCollectionRequestBuilder Assignments { get; }
+
+        /// <summary>
+        /// Gets the request builder for Catalogs.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementCatalogsCollectionRequestBuilder"/>.</returns>
+        IEntitlementManagementCatalogsCollectionRequestBuilder Catalogs { get; }
+
+        /// <summary>
+        /// Gets the request builder for ConnectedOrganizations.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementConnectedOrganizationsCollectionRequestBuilder"/>.</returns>
+        IEntitlementManagementConnectedOrganizationsCollectionRequestBuilder ConnectedOrganizations { get; }
+
+        /// <summary>
+        /// Gets the request builder for Settings.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementSettingsRequestBuilder"/>.</returns>
+        IEntitlementManagementSettingsRequestBuilder Settings { get; }
     
     }
 }

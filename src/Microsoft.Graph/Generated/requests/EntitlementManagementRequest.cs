@@ -252,6 +252,36 @@ namespace Microsoft.Graph
                     // Copy the additional data collection to the page itself so that information is not lost
                     entitlementManagementToInitialize.AccessPackageAssignmentApprovals.AdditionalData = entitlementManagementToInitialize.AdditionalData;
                 }
+                if (entitlementManagementToInitialize.AccessPackages != null && entitlementManagementToInitialize.AccessPackages.CurrentPage != null)
+                {
+                    entitlementManagementToInitialize.AccessPackages.InitializeNextPageRequest(this.Client, entitlementManagementToInitialize.AccessPackagesNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    entitlementManagementToInitialize.AccessPackages.AdditionalData = entitlementManagementToInitialize.AdditionalData;
+                }
+                if (entitlementManagementToInitialize.AssignmentRequests != null && entitlementManagementToInitialize.AssignmentRequests.CurrentPage != null)
+                {
+                    entitlementManagementToInitialize.AssignmentRequests.InitializeNextPageRequest(this.Client, entitlementManagementToInitialize.AssignmentRequestsNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    entitlementManagementToInitialize.AssignmentRequests.AdditionalData = entitlementManagementToInitialize.AdditionalData;
+                }
+                if (entitlementManagementToInitialize.Assignments != null && entitlementManagementToInitialize.Assignments.CurrentPage != null)
+                {
+                    entitlementManagementToInitialize.Assignments.InitializeNextPageRequest(this.Client, entitlementManagementToInitialize.AssignmentsNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    entitlementManagementToInitialize.Assignments.AdditionalData = entitlementManagementToInitialize.AdditionalData;
+                }
+                if (entitlementManagementToInitialize.Catalogs != null && entitlementManagementToInitialize.Catalogs.CurrentPage != null)
+                {
+                    entitlementManagementToInitialize.Catalogs.InitializeNextPageRequest(this.Client, entitlementManagementToInitialize.CatalogsNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    entitlementManagementToInitialize.Catalogs.AdditionalData = entitlementManagementToInitialize.AdditionalData;
+                }
+                if (entitlementManagementToInitialize.ConnectedOrganizations != null && entitlementManagementToInitialize.ConnectedOrganizations.CurrentPage != null)
+                {
+                    entitlementManagementToInitialize.ConnectedOrganizations.InitializeNextPageRequest(this.Client, entitlementManagementToInitialize.ConnectedOrganizationsNextLink);
+                    // Copy the additional data collection to the page itself so that information is not lost
+                    entitlementManagementToInitialize.ConnectedOrganizations.AdditionalData = entitlementManagementToInitialize.AdditionalData;
+                }
 
             }
 
