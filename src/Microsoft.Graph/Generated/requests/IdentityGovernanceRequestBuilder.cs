@@ -75,18 +75,6 @@ namespace Microsoft.Graph
         }
 
         /// <summary>
-        /// Gets the request builder for EntitlementManagement.
-        /// </summary>
-        /// <returns>The <see cref="IEntitlementManagementRequestBuilder"/>.</returns>
-        public IEntitlementManagementRequestBuilder EntitlementManagement
-        {
-            get
-            {
-                return new EntitlementManagementRequestBuilder(this.AppendSegmentToRequestUrl("entitlementManagement"), this.Client);
-            }
-        }
-
-        /// <summary>
         /// Gets the request builder for TermsOfUse.
         /// </summary>
         /// <returns>The <see cref="ITermsOfUseContainerRequestBuilder"/>.</returns>
@@ -95,6 +83,18 @@ namespace Microsoft.Graph
             get
             {
                 return new TermsOfUseContainerRequestBuilder(this.AppendSegmentToRequestUrl("termsOfUse"), this.Client);
+            }
+        }
+
+        /// <summary>
+        /// Gets the request builder for EntitlementManagement.
+        /// </summary>
+        /// <returns>The <see cref="IEntitlementManagementRequestBuilder"/>.</returns>
+        public IEntitlementManagementRequestBuilder EntitlementManagement
+        {
+            get
+            {
+                return new EntitlementManagementRequestBuilder(this.AppendSegmentToRequestUrl("entitlementManagement"), this.Client);
             }
         }
     

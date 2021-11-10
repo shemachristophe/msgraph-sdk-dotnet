@@ -152,6 +152,20 @@ namespace Microsoft.Graph
         public CallTranscriptionInfo Transcription { get; set; }
     
         /// <summary>
+        /// Gets or sets audio routing groups.
+        /// Read-only. Nullable.
+        /// </summary>
+        [JsonPropertyName("audioRoutingGroups")]
+        public ICallAudioRoutingGroupsCollectionPage AudioRoutingGroups { get; set; }
+
+        /// <summary>
+        /// Gets or sets audioRoutingGroupsNextLink.
+        /// </summary>
+        [JsonPropertyName("audioRoutingGroups@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
+        public string AudioRoutingGroupsNextLink { get; set; }
+    
+        /// <summary>
         /// Gets or sets operations.
         /// Read-only. Nullable.
         /// </summary>
