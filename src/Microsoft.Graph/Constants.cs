@@ -62,5 +62,9 @@ namespace Microsoft.Graph
             public const string DeltaLink = "@odata.deltaLink";
         }
 
+        public static class Headers
+        {
+            public const string SdkVersionHeaderValueFormatString = "graph-dotnet/{0}.{1}.{2}";
+        }
     }
 }

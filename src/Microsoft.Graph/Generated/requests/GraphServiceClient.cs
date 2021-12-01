@@ -29,6 +29,9 @@ namespace Microsoft.Graph
             IHttpProvider httpProvider = null)
             : this("https://graph.microsoft.com/v1.0", authenticationProvider, httpProvider)
         {
+            // TODO: We need to pass the version of the service library to the base client to add to the HttpClient in the HttpProvider.
+            // What if the HttpClient is used without the service library? I don't think we want to change the default headers on the client.
+            // We only want to set if using the service library request builders.
         }
 
         /// <summary>
@@ -70,6 +73,13 @@ namespace Microsoft.Graph
             string baseUrl = "https://graph.microsoft.com/v1.0")
             : base(baseUrl, httpClient)
         {
+            // TODO: Add the version of Microsoft.Graph to the headers. Will need a constant string template for both v1.0 and beta.
+            // this will need to be in the headers.
+
+            // If httpClient comes from the factory, we will need to put the service library version first.
+            httpClient.DefaultRequestHeaders.TryGetValues("SdkVersion", out new values)
+
+            // Otherwise we just need to add this version. 
         }
     
         /// <summary>
