@@ -22,11 +22,29 @@ namespace Microsoft.Graph
     {
 
         /// <summary>
+        /// Gets or sets hidden.
+        /// </summary>
+        [JsonPropertyName("hidden")]
+        public bool? Hidden { get; set; }
+    
+        /// <summary>
         /// Gets or sets identity.
         /// The identitySet associated with this invitation.
         /// </summary>
         [JsonPropertyName("identity")]
         public IdentitySet Identity { get; set; }
+    
+        /// <summary>
+        /// Gets or sets participantId.
+        /// </summary>
+        [JsonPropertyName("participantId")]
+        public string ParticipantId { get; set; }
+    
+        /// <summary>
+        /// Gets or sets removeFromDefaultAudioRoutingGroup.
+        /// </summary>
+        [JsonPropertyName("removeFromDefaultAudioRoutingGroup")]
+        public bool? RemoveFromDefaultAudioRoutingGroup { get; set; }
     
         /// <summary>
         /// Gets or sets replacesCallId.
