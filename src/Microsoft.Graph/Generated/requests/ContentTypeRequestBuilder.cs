@@ -122,6 +122,17 @@ namespace Microsoft.Graph
         }
 
         /// <summary>
+        /// Gets the request builder for ContentTypeUnpublish.
+        /// </summary>
+        /// <returns>The <see cref="IContentTypeUnpublishRequestBuilder"/>.</returns>
+        public IContentTypeUnpublishRequestBuilder Unpublish()
+        {
+            return new ContentTypeUnpublishRequestBuilder(
+                this.AppendSegmentToRequestUrl("microsoft.graph.unpublish"),
+                this.Client);
+        }
+
+        /// <summary>
         /// Gets the request builder for ContentTypeAssociateWithHubSites.
         /// </summary>
         /// <returns>The <see cref="IContentTypeAssociateWithHubSitesRequestBuilder"/>.</returns>
@@ -149,17 +160,6 @@ namespace Microsoft.Graph
                 this.Client,
                 sourceFile,
                 destinationFileName);
-        }
-
-        /// <summary>
-        /// Gets the request builder for ContentTypeUnpublish.
-        /// </summary>
-        /// <returns>The <see cref="IContentTypeUnpublishRequestBuilder"/>.</returns>
-        public IContentTypeUnpublishRequestBuilder Unpublish()
-        {
-            return new ContentTypeUnpublishRequestBuilder(
-                this.AppendSegmentToRequestUrl("microsoft.graph.unpublish"),
-                this.Client);
         }
 
         /// <summary>
