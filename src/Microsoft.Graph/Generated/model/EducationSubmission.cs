@@ -22,6 +22,20 @@ namespace Microsoft.Graph
     {
     
         /// <summary>
+        /// Gets or sets reassigned by.
+        /// User who moved the status of this submission to reassigned.
+        /// </summary>
+        [JsonPropertyName("reassignedBy")]
+        public IdentitySet ReassignedBy { get; set; }
+    
+        /// <summary>
+        /// Gets or sets reassigned date time.
+        /// Moment in time when the submission was reassigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+        /// </summary>
+        [JsonPropertyName("reassignedDateTime")]
+        public DateTimeOffset? ReassignedDateTime { get; set; }
+    
+        /// <summary>
         /// Gets or sets recipient.
         /// Who this submission is assigned to.
         /// </summary>
@@ -51,7 +65,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets status.
-        /// Read-Only. Possible values are: working, submitted, released, returned.
+        /// Read-only. Possible values are: working, submitted, released, returned, and reassigned. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: reassigned.
         /// </summary>
         [JsonPropertyName("status")]
         public EducationSubmissionStatus? Status { get; set; }

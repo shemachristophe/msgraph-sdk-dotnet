@@ -244,6 +244,20 @@ namespace Microsoft.Graph
         public string UserType { get; set; }
     
         /// <summary>
+        /// Gets or sets assignments.
+        /// Assignments belonging to the user.
+        /// </summary>
+        [JsonPropertyName("assignments")]
+        public IEducationUserAssignmentsCollectionPage Assignments { get; set; }
+
+        /// <summary>
+        /// Gets or sets assignmentsNextLink.
+        /// </summary>
+        [JsonPropertyName("assignments@odata.nextLink")]
+        [JsonConverter(typeof(NextLinkConverter))]
+        public string AssignmentsNextLink { get; set; }
+    
+        /// <summary>
         /// Gets or sets rubrics.
         /// </summary>
         [JsonPropertyName("rubrics")]

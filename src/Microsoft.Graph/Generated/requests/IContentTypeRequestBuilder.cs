@@ -68,6 +68,12 @@ namespace Microsoft.Graph
         IContentTypePublishRequestBuilder Publish();
 
         /// <summary>
+        /// Gets the request builder for ContentTypeUnpublish.
+        /// </summary>
+        /// <returns>The <see cref="IContentTypeUnpublishRequestBuilder"/>.</returns>
+        IContentTypeUnpublishRequestBuilder Unpublish();
+
+        /// <summary>
         /// Gets the request builder for ContentTypeAssociateWithHubSites.
         /// </summary>
         /// <returns>The <see cref="IContentTypeAssociateWithHubSitesRequestBuilder"/>.</returns>
@@ -82,12 +88,6 @@ namespace Microsoft.Graph
         IContentTypeCopyToDefaultContentLocationRequestBuilder CopyToDefaultContentLocation(
             ItemReference sourceFile,
             string destinationFileName = null);
-
-        /// <summary>
-        /// Gets the request builder for ContentTypeUnpublish.
-        /// </summary>
-        /// <returns>The <see cref="IContentTypeUnpublishRequestBuilder"/>.</returns>
-        IContentTypeUnpublishRequestBuilder Unpublish();
 
         /// <summary>
         /// Gets the request builder for ContentTypeIsPublished.
