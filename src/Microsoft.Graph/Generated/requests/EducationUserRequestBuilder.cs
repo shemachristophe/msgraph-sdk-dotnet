@@ -51,6 +51,18 @@ namespace Microsoft.Graph
         }
     
         /// <summary>
+        /// Gets the request builder for Assignments.
+        /// </summary>
+        /// <returns>The <see cref="IEducationUserAssignmentsCollectionRequestBuilder"/>.</returns>
+        public IEducationUserAssignmentsCollectionRequestBuilder Assignments
+        {
+            get
+            {
+                return new EducationUserAssignmentsCollectionRequestBuilder(this.AppendSegmentToRequestUrl("assignments"), this.Client);
+            }
+        }
+
+        /// <summary>
         /// Gets the request builder for Rubrics.
         /// </summary>
         /// <returns>The <see cref="IEducationUserRubricsCollectionRequestBuilder"/>.</returns>

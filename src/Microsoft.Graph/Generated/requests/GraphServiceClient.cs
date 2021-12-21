@@ -536,6 +536,17 @@ namespace Microsoft.Graph
         }
     
         /// <summary>
+        /// Gets the GraphServiceSolutions request builder.
+        /// </summary>
+        public virtual ISolutionsRootRequestBuilder Solutions
+        {
+            get
+            {
+                return new SolutionsRootRequestBuilder(this.BaseUrl + "/solutions", this);
+            }
+        }
+    
+        /// <summary>
         /// Gets the GraphServicePrivacy request builder.
         /// </summary>
         public virtual IPrivacyRequestBuilder Privacy

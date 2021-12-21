@@ -32,6 +32,12 @@ namespace Microsoft.Graph
         new IEducationUserRequest Request(IEnumerable<Option> options);
     
         /// <summary>
+        /// Gets the request builder for Assignments.
+        /// </summary>
+        /// <returns>The <see cref="IEducationUserAssignmentsCollectionRequestBuilder"/>.</returns>
+        IEducationUserAssignmentsCollectionRequestBuilder Assignments { get; }
+
+        /// <summary>
         /// Gets the request builder for Rubrics.
         /// </summary>
         /// <returns>The <see cref="IEducationUserRubricsCollectionRequestBuilder"/>.</returns>
