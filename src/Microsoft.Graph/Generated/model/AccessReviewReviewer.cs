@@ -15,24 +15,31 @@ namespace Microsoft.Graph
     using System.Text.Json.Serialization;
 
     /// <summary>
-    /// The type Agreement File Localization.
+    /// The type Access Review Reviewer.
     /// </summary>
-    public partial class AgreementFileLocalization : AgreementFileProperties
+    public partial class AccessReviewReviewer : Entity
     {
     
         /// <summary>
-        /// Gets or sets versions.
-        /// Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
+        /// Gets or sets created date time.
+        /// The date when the reviewer was added for the access review.
         /// </summary>
-        [JsonPropertyName("versions")]
-        public IAgreementFileLocalizationVersionsCollectionPage Versions { get; set; }
-
+        [JsonPropertyName("createdDateTime")]
+        public DateTimeOffset? CreatedDateTime { get; set; }
+    
         /// <summary>
-        /// Gets or sets versionsNextLink.
+        /// Gets or sets display name.
+        /// Name of reviewer.
         /// </summary>
-        [JsonPropertyName("versions@odata.nextLink")]
-        [JsonConverter(typeof(NextLinkConverter))]
-        public string VersionsNextLink { get; set; }
+        [JsonPropertyName("displayName")]
+        public string DisplayName { get; set; }
+    
+        /// <summary>
+        /// Gets or sets user principal name.
+        /// User principal name of the user.
+        /// </summary>
+        [JsonPropertyName("userPrincipalName")]
+        public string UserPrincipalName { get; set; }
     
     }
 }
