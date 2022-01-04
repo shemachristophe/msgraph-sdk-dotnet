@@ -36,7 +36,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets display name.
-        /// The display name of the access package.
+        /// The display name of the access package. Supports $filter (eq, contains).
         /// </summary>
         [JsonPropertyName("displayName")]
         public string DisplayName { get; set; }

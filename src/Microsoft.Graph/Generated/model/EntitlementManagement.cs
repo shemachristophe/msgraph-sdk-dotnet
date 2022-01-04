@@ -35,7 +35,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets access packages.
-        /// Access packages.
+        /// Represents access package objects.
         /// </summary>
         [JsonPropertyName("accessPackages")]
         public IEntitlementManagementAccessPackagesCollectionPage AccessPackages { get; set; }
@@ -49,7 +49,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets assignment requests.
-        /// Access package assignment requests.
+        /// Represents access package assignment requests created by or on behalf of a user.
         /// </summary>
         [JsonPropertyName("assignmentRequests")]
         public IEntitlementManagementAssignmentRequestsCollectionPage AssignmentRequests { get; set; }
@@ -63,7 +63,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets assignments.
-        /// Access package assignments.
+        /// Represents the grant of an access package to a subject (user or group).
         /// </summary>
         [JsonPropertyName("assignments")]
         public IEntitlementManagementAssignmentsCollectionPage Assignments { get; set; }
@@ -77,7 +77,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets catalogs.
-        /// Access package catalogs.
+        /// Represents a group of access packages.
         /// </summary>
         [JsonPropertyName("catalogs")]
         public IEntitlementManagementCatalogsCollectionPage Catalogs { get; set; }
@@ -91,7 +91,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets connected organizations.
-        /// Connected organizations.
+        /// Represents references to a directory or domain of another organization whose users can request access.
         /// </summary>
         [JsonPropertyName("connectedOrganizations")]
         public IEntitlementManagementConnectedOrganizationsCollectionPage ConnectedOrganizations { get; set; }
@@ -105,7 +105,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets settings.
-        /// Entitlement management settings.
+        /// Represents the settings that control the behavior of Azure AD entitlement management.
         /// </summary>
         [JsonPropertyName("settings")]
         public EntitlementManagementSettings Settings { get; set; }

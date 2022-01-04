@@ -22,6 +22,7 @@ namespace Microsoft.Graph
     
         /// <summary>
         /// Gets or sets definitions.
+        /// Represents the template and scheduling for an access review.
         /// </summary>
         [JsonPropertyName("definitions")]
         public IAccessReviewSetDefinitionsCollectionPage Definitions { get; set; }
