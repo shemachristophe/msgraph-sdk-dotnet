@@ -679,6 +679,17 @@ namespace Microsoft.Graph
         }
     
         /// <summary>
+        /// Gets the GraphServiceIdentityProtection request builder.
+        /// </summary>
+        public virtual IIdentityProtectionRootRequestBuilder IdentityProtection
+        {
+            get
+            {
+                return new IdentityProtectionRootRequestBuilder(this.BaseUrl + "/identityProtection", this);
+            }
+        }
+    
+        /// <summary>
         /// Gets the GraphServiceDeviceAppManagement request builder.
         /// </summary>
         public virtual IDeviceAppManagementRequestBuilder DeviceAppManagement
