@@ -49,5 +49,10 @@ namespace Microsoft.Graph
         /// </summary>
         CertificateBasedAuthentication = 5,
 	
+        /// <summary>
+        /// Multi Factor Authentication
+        /// </summary>
+        MultiFactorAuthentication = 6,
+	
     }
 }
