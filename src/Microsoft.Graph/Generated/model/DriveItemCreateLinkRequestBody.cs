@@ -50,5 +50,11 @@ namespace Microsoft.Graph
         [JsonPropertyName("message")]
         public string Message { get; set; }
     
+        /// <summary>
+        /// Gets or sets RetainInheritedPermissions.
+        /// </summary>
+        [JsonPropertyName("retainInheritedPermissions")]
+        public bool? RetainInheritedPermissions { get; set; }
+    
     }
 }

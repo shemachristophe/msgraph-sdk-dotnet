@@ -131,7 +131,8 @@ namespace Microsoft.Graph
             string scope = null,
             DateTimeOffset? expirationDateTime = null,
             string password = null,
-            string message = null);
+            string message = null,
+            bool? retainInheritedPermissions = null);
 
         /// <summary>
         /// Gets the request builder for DriveItemFollow.
@@ -149,6 +150,7 @@ namespace Microsoft.Graph
             IEnumerable<string> roles = null,
             bool? sendInvitation = null,
             string message = null,
+            bool? retainInheritedPermissions = null,
             string expirationDateTime = null,
             string password = null);
 
